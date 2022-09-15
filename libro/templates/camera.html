@@ -1,0 +1,44 @@
+ {%block title %} yo {% endblock %} {% load static %} 
+
+<div class="fotos">
+
+    <img src="http://placekitten.com/g/320/261" id="perfil" alt="photo">
+
+    <button id="startbutton"> Guarda tu foto</button>
+    <video id="video"></video>
+
+    <canvas id="canvas"></canvas>
+    <img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
+    <style>
+        .fotos {
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            height: 860px;
+            width: 850px;
+            background-image: url("http://magicamente.com.co/wp-content/uploads/2022/07/la_persona_mas_importante.png");
+        }
+        
+        #startbutton {
+            margin-left: 45%;
+            margin-top: 20px;
+        }
+        
+        #perfil {
+            position: relative;
+            height: 320px;
+            width: 320px;
+            border-radius: 20%;
+            margin-left: 320px;
+            margin-top: 350px;
+            z-index: -10;
+        }
+    </style>
+    
+</div>
+
+<script src='{% static "js/camera.js" %}' type="text/javascript" defer></script>
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %} {% block content1 %}
+<script src='{% static "js\camera.js" %}'></script>
+<div class="fotos">
+
+    <img src="http://placekitten.com/g/320/261" id="perfil" alt="photo">
+
+    <button id="startbutton"> guarda tu foto</button>
+    <video id="video"></video>
+
+    <canvas id="canvas"></canvas>
+    <style>
+        .fotos {
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            height: 860px;
+            width: 850px;
+            background-image: url('{% static "img/camara.png" %}');
+        }
+        
+        #startbutton {
+            margin-left: 45%;
+            margin-top: 20px;
+        }
+        
+        #perfil {
+            position: relative;
+            height: 320px;
+            width: 320px;
+            border-radius: 20%;
+            margin-left: 320px;
+            margin-top: 350px;
+            z-index: -10;
+        }
+    </style>
+
+
+
+</div>
+{% endblock %} {% block content2 %}
+
+<img src='{% static "img/el_libro/el-libro.png" %}' class="full-image"> {% endblock %}
