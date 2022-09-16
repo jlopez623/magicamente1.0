@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 
 
@@ -7,25 +8,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='{% static "css/stylepage.css" %}' type="text/css">
-    <link rel="stylesheet" href='{% static "css/navigate.css" %}' type="text/css">
+   
+    
     
     <!--<script src='{% static "js/pagesChange.js" %}'></script> -->
+    
 
     <title>{{titulo}}</title>
-</head>
 
-{% include "navigatebar.html" %}
+
+<header>
+
+    {% include "navigatebar.html" %}
+
+</header>
 
 <body>
 
-
+   
 
     <div class="page">
         {% block imagenCentral %} {% endblock %}
-
-
+        
+       
 
         <div class="content">
+            
             
             <div class="content1" id="content1">
 

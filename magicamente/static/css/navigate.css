@@ -1,212 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fira+Sans:wght@200&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300&family=Square+Peg&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Uchen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fira+Sans:wght@200&family=Open+Sans:wght@300&family=PT+Sans&family=Source+Sans+Pro:wght@300&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+/*body {
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}*/
 
-/*
-CSS rules to specify families
-
-font-family: 'Amatic SC', cursive;
-font-family: 'Fira Sans', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'PT Sans', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Square Peg', cursive;*/
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
 
 header {
-    padding-bottom: 0px;
-    height: 100px;
-    width: auto;
+  background: #55d6aa;
 }
 
-nav .menu-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+header::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.menu {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 10px;
-    background: #56595a;
-    color: #d59318;
-    padding: 20px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-    box-sizing: border-box;
-    font-size: 20%;
+.logo {
+  float: left;
+  padding: 10px 0;
 }
 
-.menu-logo {
-    line-height: 80px;
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
+nav {
+  float: right;
 }
 
-.menu-logo img {
-    max-height: 80px;
-    max-width: 100px;
-    flex-shrink: 0;
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.menu-container a {
-    text-decoration: none;
-    color: #56595a;
-    transition: color 0.3s ease;
-    padding: 0px;
-    font-size: large;
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
 }
 
-.menu-container a:hover {
-    color: #a546b8;
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.menu-container input {
-    display: block;
-    width: 35px;
-    height: 20px;
-    margin: 0;
-    position: absolute;
-    cursor: pointer;
-    opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
-    -webkit-touch-callout: none;
+nav a:hover {
+  color: #000;
 }
 
-.amenu {
-    text-align: center;
-    width: 200px;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
 }
 
-
-/* Burger menu */
-
-.menu-container span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #d59318;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
-}
-
-.menu-container span:first-child {
-    transform-origin: 0% 0%;
-}
-
-.menu-container span:nth-child(3) {
-    transform-origin: 0% 100%;
-}
-
-.menu-container input:checked~span {
-    opacity: 1;
-    transform: rotate(45deg) translate(3px, -1px);
-    background: #56595a;
-}
-
-.menu-container input:checked~span:nth-child(4) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-.menu-container input:checked~span:nth-child(3) {
-    transform: rotate(-45deg) translate(-5px, 11px);
-}
-
-.menu ul {
-    list-style: none;
-}
-
-.menu li {
-    padding: 10px 0;
-    font-family: 'PT Sans', sans-serif;
-}
-
-.menu a {
-    font-size: large;
-}
-
-
-/* mobile styles */
-
-@media only screen and (max-width: 767px) {
-    .menu-container {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    .menu-logo {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .menu-logo img {
-        max-height: 30px;
-    }
-    .menu {
-        position: absolute;
-        box-sizing: border-box;
-        width: 300px;
-        right: -300px;
-        top: 0;
-        margin: -20px;
-        padding: 75px 50px 50px;
-        background: #d59318;
-        -webkit-font-smoothing: antialiased;
-        /* to stop flickering of text in safari */
-        transform-origin: 0% 0%;
-        transform: translateX(0%);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    }
-    .menu-container input:checked~.menu {
-        transform: translateX(-100%);
-    }
-}
-
-
-/* desktop styles */
-
-@media only screen and (min-width: 768px) {
-    .menu-container {
-        width: 100%;
-    }
-    .menu-container a {
-        color: #d59318;
-    }
-    .menu-container input {
-        display: none;
-    }
-    /* Burger menu */
-    .menu-container span {
-        display: none;
-    }
-    .menu {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .menu ul {
-        display: flex;
-        padding: 0;
-    }
-    .menu li {
-        padding: 0 20px;
-    }
+nav a:hover::before {
+  width: 100%;
 }

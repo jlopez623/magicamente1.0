@@ -7,6 +7,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
 from django.template import Template, Context, loader
+from .forms import UserForm, RegistrarForm
+
+from .models import Usuario
 
 #request realizar peticion
 #httpResponse enviar respuesta protocolo http
@@ -107,4 +110,12 @@ def usuario(request):
     
 
 def camera(request):
-    return render(request, 'camera.html')    
+    return render(request, 'camera.html')
+
+
+def crearUsuario(request):
+    #data = {'form': RegistrarForm()}
+    # data = UserForm.objects.all()
+    formulario = UserForm(request.POST or None)
+    return render(request, 'forms/registro.html', {'formulario': formulario})
+
