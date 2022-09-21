@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from telnetlib import LOGOUT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,11 @@ SECRET_KEY = 'django-insecure-2gf_2123sn84n55gibu9i0!a91gmb27a3$-k(+_qi6&zavq)i(
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
+LOGIN_REDIRECT_URL= '/'
+LOGOUT_REDIRECT_URL='/'
 
 
 # Application definition

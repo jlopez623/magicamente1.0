@@ -7,7 +7,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
 from django.template import Template, Context, loader
-from .forms import UserForm, RegistrarForm
+from .forms import UserForm
 
 from .models import Usuario
 
@@ -71,6 +71,8 @@ def prologo1(request):
     }
     
     return render(request,'06-prologo1.html',data)
+def home(request):
+    return render(request, 'home.html')
     
 def prologo2(request):
     return render(request,'07-prologo2.html')

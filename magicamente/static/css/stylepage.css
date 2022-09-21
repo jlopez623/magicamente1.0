@@ -20,6 +20,14 @@ font-family: 'Square Peg', cursive;
     font-family: 'PT Sans', sans-serif;
 }
 
+.container-nav ul {
+    display: flex;
+    width: 100%;
+    background-color: #a546b8;
+}
+
+
+
 .italic {
     font-style: italic;
     font-size: medium;
