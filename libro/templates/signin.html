@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h1>login</h1>
+
+<div class="login">
+    {{error}}
+    <form action="/login/" method="post" >
+        {% csrf_token %}
+        {{formlogin.as_p}}
+        
+        <button>
+            Login
+
+        </button> 
+
+    </form>
+    
+</div>
+
+{% endblock %}

@@ -19,21 +19,22 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-from libro.views import agradecimientos,  cargarHtml, magia2, parametros,  portada, shortcut, personaImportante
+from libro.views import agradecimientos,  cargarHtml, magia2, parametros,  portada, shortcut, personaImportante, signout, signin
 from libro.views import prologo1, prologo2, introduccion, introduccion2, magia1, magia2, magia3, fomr1, usuario1, magia4
-from libro.views import agua01, agua02, agua03, usuario, camera, crearUsuario, home
-
-
+from libro.views import agua01, agua02, agua03, usuario, camera, crearUsuario, home, signup, dashboard
 
 
 urlpatterns = [
-    
-    path('accounts/', include('django.contrib.auth.urls') ),
-    
-    path('admin/', admin.site.urls),
 
-  
-    path('/', home),
+    path('accounts/', include('django.contrib.auth.urls')),
+
+    path('admin/', admin.site.urls),
+    path('signup/', signup, name="signup"),
+    path('logout/', signout, name='logout'),
+    path('login/', signin, name='login'),
+    path('', home, name='home'),
+    path('home/', home),
+    path('dashboard/', dashboard, name='dashboard'),
     path('portada1/', portada),
     path('parametros/', parametros),
     path('cargador/', cargarHtml),
@@ -52,12 +53,12 @@ urlpatterns = [
     path('agua02/', agua02),
     path('agua03/', agua03),
     path('users/', usuario),
-    path('registro/', crearUsuario, name='registro' ),
+    path('registro/', crearUsuario, name='registro'),
     path('yo/', camera),
 
     path('form1/', fomr1),
     path('form1/user/', usuario)
-  
 
-    
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
