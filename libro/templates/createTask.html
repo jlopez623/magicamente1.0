@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+
+
+{% block content %}
+<h2>crear task</h2>
+{{error}}
+<form action="/creartarea/" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button>
+        save
+    </button>
+
+</form>
+
+
+
+
+{% endblock %}

@@ -7,12 +7,15 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import datetime
 from django.template import Template, Context, loader
-from .forms import UserForm
+from .forms import UserForm, TaskForm
 
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+from .forms import TaskForm
+from .models import Task
+from django.shortcuts import get_object_or_404
 
 # request realizar peticion
 # httpResponse enviar respuesta protocolo http
@@ -72,12 +75,39 @@ def signin(request):
             return render(request, 'signin.html', {
                 'formlogin': AuthenticationForm,
                 'error': 'Usuario o contraseña incorrectos'
-                })
+            })
         else:
             login(request, user)
-            return redirect('dashboard' )
-            
+            return redirect('dashboard')
 
+
+def crearTask(request):
+
+    if request.method == 'GET':
+        return render(request, 'createTask.html', {
+            'form': TaskForm
+        })
+    else:
+        try:
+            form = TaskForm(request.POST)  # toma los datos ingresados +/-
+            newTask = form.save(commit=False)
+            newTask.user = request.user
+            newTask.save()
+            return redirect('dashboard')
+        except ValueError:
+            return render(request, 'createTask.html', {
+            'form': TaskForm,
+            'error': 'Ingresa datos validos'
+            })
+
+def task(request):
+    tasks = Task.objects.filter(user=request.user)
+    return render(request, 'task.html', {'tasks': tasks} )
+
+def taskDetail(request, task_id):
+    print(task_id)
+    task = get_object_or_404(Task, pk=task_id)
+    return render(request, 'taskdetail.html', {'task': task })
 
 def portada(request):
     # open doc
