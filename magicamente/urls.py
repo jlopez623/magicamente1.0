@@ -44,7 +44,7 @@ urlpatterns = [
     path('parametros/', parametros),
     path('cargador/', cargarHtml),
     path('shortcut/', shortcut),
-    path('agradecimientos/', agradecimientos),
+    path('agradecimientos/', agradecimientos, name='agradecimientos'),
     path('la-persona-importante/', personaImportante),
     path('prologo1/', prologo1),
     path('prologo2/', prologo2),

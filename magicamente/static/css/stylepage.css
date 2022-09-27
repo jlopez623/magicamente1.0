@@ -19,11 +19,16 @@ font-family: 'Square Peg', cursive;
   padding: 0%;
   font-family: "PT Sans", sans-serif;
   box-sizing: border-box;
+  user-select: none;
+}
+ol .a{
+  text-decoration: none;
+  list-style: none;
 }
 
 
-canvas {
-  background-color: #a546b8;
+label{
+ width: auto; 
 }
 
 .container-nav ul {

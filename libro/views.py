@@ -1,4 +1,5 @@
 from pipes import Template
+from unicodedata import name
 from unittest import loader
 
 
