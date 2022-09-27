@@ -1,21 +1,36 @@
-{% extends 'layout.html' %}
-{% block content %}
+{% extends 'layout-home.html' %}
+{% block content3 %}
 
-<h1>login</h1>
-
-<div class="login">
-    {{error}}
-    <form action="/login/" method="post" >
-        {% csrf_token %}
-        {{formlogin.as_p}}
-        
-        <button>
-            Login
-
-        </button> 
-
-    </form>
-    
 </div>
+<main class="container">
+    <div class="row">
+        <div class ="col-md-6 offset-md-4 mt-5">
+            <form method="POST" class="card card-body">
+                <h1 class="text center">Ingreso</h1>
+                {{error}}
+                {% csrf_token %}
+                
+                
+                <div class="mb-3">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="escribe tu nombre de usuario">
+                </div>
 
+                <div class="mb-3">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Escribe tu contraseña">
+
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-dark">
+                        Login
+                    </button>
+                </div>
+               <div class="mensaje-error">{{error}}</div> 
+            </form>
+        </div>
+
+    </div>
+   </main>
 {% endblock %}

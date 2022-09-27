@@ -1,4 +1,4 @@
-{% load static %}
+{% extends 'layout.html' %} {% load static %} 
 
 <!DOCTYPE html>
 
@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='{% static "css/stylepage.css" %}' type="text/css">
+    
    
     
     
@@ -16,16 +17,9 @@
 
     <title>{{titulo}}</title>
 
-
-
-
-    
-
-
-
 <body>
 
-    {% include "navigatebar.html" %}
+    
 
     <div class="page">
         {% block imagenCentral %} {% endblock %}
@@ -35,13 +29,13 @@
         <div class="content">
             
             
-            <div class="content1" id="content1">
+            <div class="content1" id="content1" style="width: 50%;">
 
                 {% block content1 %} {% endblock %}
 
             </div>
 
-            <div class="content2" id="content2">
+            <div class="content2" id="content2" style="width: 50%;">
 
                 {% block content2 %} {% endblock %}
 

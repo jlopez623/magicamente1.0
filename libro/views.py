@@ -16,6 +16,8 @@ from django.db import IntegrityError
 from .forms import TaskForm
 from .models import Task
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 # request realizar peticion
 # httpResponse enviar respuesta protocolo http
@@ -52,10 +54,12 @@ def signup(request):
     })
 
 
+@login_required
 def dashboard(request):
     return render(request, 'userdashboard.html')
 
 
+@login_required
 def signout(request):
     logout(request)
     return redirect('home')
@@ -72,7 +76,7 @@ def signin(request):
 
         if user is None:
 
-            return render(request, 'signin.html', {
+            return render(request, 'signn.html', {
                 'formlogin': AuthenticationForm,
                 'error': 'Usuario o contraseña incorrectos'
             })
@@ -81,6 +85,7 @@ def signin(request):
             return redirect('dashboard')
 
 
+@login_required
 def crearTask(request):
 
     if request.method == 'GET':
@@ -96,18 +101,60 @@ def crearTask(request):
             return redirect('dashboard')
         except ValueError:
             return render(request, 'createTask.html', {
-            'form': TaskForm,
-            'error': 'Ingresa datos validos'
+                'form': TaskForm,
+                'error': 'Ingresa datos validos'
             })
 
-def task(request):
-    tasks = Task.objects.filter(user=request.user)
-    return render(request, 'task.html', {'tasks': tasks} )
 
+@login_required
+def task(request):
+    tasks = Task.objects.filter(user=request.user,  datecompleted__isnull=True)
+    return render(request, 'task.html', {'tasks': tasks})
+
+
+@login_required
+def completadas(request):
+    tasks = Task.objects.filter(
+        user=request.user, datecompleted__isnull=False).order_by('-datecompleted')
+    return render(request, 'task.html', {'tasks': tasks})
+
+
+@login_required
 def taskDetail(request, task_id):
-    print(task_id)
-    task = get_object_or_404(Task, pk=task_id)
-    return render(request, 'taskdetail.html', {'task': task })
+    if request.method == 'GET':
+        print(task_id)
+        task = get_object_or_404(Task, pk=task_id, user=request.user)
+        form = TaskForm(instance=task)
+        return render(request, 'taskdetail.html', {'task': task, 'form': form})
+    else:
+        try:
+            print(request.POST)
+            task = get_object_or_404(Task, pk=task_id, user=request.user)
+            form = TaskForm(request.POST, instance=task)
+            form.save()
+            print('lelgo')
+            return redirect('task.html')
+        except ValueError:
+            error = 'revisa los valores ingresados'
+            return render(request, 'taskdetail.html', {'task': task, 'form': form, 'error': error})
+
+
+@login_required
+def complete(request, task_id):
+    task = get_object_or_404(Task, pk=task_id, user=request.user)
+    if request.method == 'POST':
+        task.datecompleted = timezone.now()
+        task.save()
+        return redirect('tareas')  # nombre de vista 'tareas=task.khtml'
+
+
+@login_required
+def delete(request, task_id):
+    task = get_object_or_404(Task, pk=task_id, user=request.user)
+    if request.method == 'POST':
+        task.delete()
+        return redirect('tareas')
+
 
 def portada(request):
     # open doc

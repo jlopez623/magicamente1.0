@@ -1,4 +1,4 @@
-{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %} {% block content1 %}
+{% extends "layout.html" %} {%block title %} Agua {% endblock %} {% load static %} {% block content1 %}
 
 <h1 class="cursiva-media"> Agua</h1>
 <p>
@@ -35,7 +35,7 @@
 
 </p>
 <style>
-    ul {
+    .lista-colores {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -107,9 +107,11 @@
         padding: 5px;
         text-decoration: none;
         margin: 10px;
+        
     }
+    
 </style>
-<ul class="lstas">
+<ul class="lista-colores">
     <li class="yellow">Física</li>
     <li class="green">Mental</li>
     <li class="violet">Emocional</li>

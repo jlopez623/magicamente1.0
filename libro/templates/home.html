@@ -1,28 +1,49 @@
 
-{% extends 'layout.html' %} 
+{% extends 'layout-home.html' %} 
 
-{% block content %}
+{% block content3 %}
 
     <div class="libro-container">
         <img src='' alt="">
-        <h2>home</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui atque ea delectus tempore porro, perferendis deserunt placeat quae harum sapiente voluptate necessitatibus voluptas nihil quo autem nam consectetur impedit facere.
-        Labore temporibus error dolorem iusto officia impedit voluptatem odit fugit dolore ut veniam, aliquid sunt nesciunt fuga neque eveniet aperiam facilis sit quidem adipisci quia dicta, et quam! Quos, explicabo!
-        Laboriosam nobis dolorem voluptatem quo iusto enim eaque laudantium, illo suscipit fugiat maxime, asperiores ex placeat possimus iste eos dolorum itaque vitae quos reprehenderit voluptatibus consequuntur quod excepturi odit. Error.
-        Magni repellendus quibusdam deleniti modi dolorem ex vero labore quidem sit sint unde libero amet a culpa quisquam at, mollitia reiciendis esse ad, quam nobis. Molestias eveniet iusto perferendis tempora.
-        Perferendis sequi distinctio soluta sit repellat est, minus accusantium itaque aut quia? Veritatis nisi magni tenetur corrupti rem eaque, nam quis aliquid alias blanditiis dolor aut, quibusdam, non officia ratione.
-        Sed aspernatur inventore voluptates quisquam neque illo necessitatibus? Provident quos ipsum nihil! A consequatur similique magnam quisquam dolore, cupiditate praesentium numquam amet, facere perspiciatis ratione in explicabo blanditiis eaque hic?
-        Asperiores explicabo fugiat velit ullam veritatis sequi neque quod eligendi debitis maiores ipsum distinctio quisquam, officiis sed corporis facere obcaecati laboriosam blanditiis saepe commodi quam modi consectetur assumenda? Libero, quae!
-        Distinctio nihil praesentium veritatis eaque debitis ipsam impedit inventore consequatur, quod eum laboriosam rerum asperiores unde eius ab exercitationem suscipit! Magni autem ducimus architecto veniam quia rerum rem culpa soluta.
-        Natus molestiae, cumque commodi similique sint maiores! Nam repudiandae rerum harum, eos deserunt eius illum explicabo laborum necessitatibus. Suscipit, consequuntur earum. Quas corporis itaque maiores, quis quod totam asperiores at.
-        Similique aut, nam veritatis maxime nulla dolores tempora voluptates nesciunt sed iure exercitationem voluptas numquam quaerat nobis, labore, magnam ex quasi. Corrupti sed veritatis, vitae rem facilis cupiditate dolor doloribus?
-        </p>
+       
     </div>
 
-    <footer>
+    <main class="container py-5">
+        <section class="card card-body">
+            <h2 class="display">Magicamente</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui atque ea delectus tempore porro, perferendis deserunt placeat quae harum sapiente voluptate necessitatibus voluptas nihil quo autem nam consectetur impedit facere.
+            Labore temporibus error dolorem iusto officia impedit voluptatem odit fugit dolore ut veniam, aliquid sunt nesciunt fuga neque eveniet aperiam facilis sit quidem adipisci quia dicta, et quam! Quos, explicabo!
+            Laboriosam nobis dolorem voluptatem quo iusto enim eaque laudantium, illo suscipit fugiat maxime, asperiores ex placeat possimus iste eos dolorum itaque vitae quos reprehenderit voluptatibus consequuntur quod excepturi odit. Error.
+            Magni repellendus quibusdam deleniti modi dolorem ex vero labore quidem sit sint unde libero amet a culpa quisquam at, mollitia reiciendis esse ad, quam nobis. Molestias eveniet iusto perferendis tempora.
+            Perferendis sequi distinctio soluta sit repellat est, minus accusantium itaque aut quia? Veritatis nisi magni tenetur corrupti rem eaque, nam quis aliquid alias blanditiis dolor aut, quibusdam, non officia ratione.
+            Sed aspernatur inventore voluptates quisquam neque illo necessitatibus? Provident quos ipsum nihil! A consequatur similique magnam quisquam dolore, cupiditate praesentium numquam amet, facere perspiciatis ratione in explicabo blanditiis eaque hic?
+            Asperiores explicabo fugiat velit ullam veritatis sequi neque quod eligendi debitis maiores ipsum distinctio quisquam, officiis sed corporis facere obcaecati laboriosam blanditiis saepe commodi quam modi consectetur assumenda? Libero, quae!
+            Distinctio nihil praesentium veritatis eaque debitis ipsam impedit inventore consequatur, quod eum laboriosam rerum asperiores unde eius ab exercitationem suscipit! Magni autem ducimus architecto veniam quia rerum rem culpa soluta.
+            Natus molestiae, cumque commodi similique sint maiores! Nam repudiandae rerum harum, eos deserunt eius illum explicabo laborum necessitatibus. Suscipit, consequuntur earum. Quas corporis itaque maiores, quis quod totam asperiores at.
+            Similique aut, nam veritatis maxime nulla dolores tempora voluptates nesciunt sed iure exercitationem voluptas numquam quaerat nobis, labore, magnam ex quasi. Corrupti sed veritatis, vitae rem facilis cupiditate dolor doloribus?
+            </p>
 
-        <span>created by: </span>
+           <div class="text-center">
+            <a class="btn btn-dark" href="/login/">
+                Ingresar
+            </a>
+            <a class="btn btn-secondary" href="/signup/">
+                Registrarse
+            </a>
+           </div>
+           
+        </section>
+    </main>
 
-    </footer>
+    {% endblock %}
+    <div class="ninguno" style="width: 0; height:0">
+        {% block content2 %}
+        {% endblock %}
+    
+        {% block content1 %}
+        {% endblock %}
+    
 
-{% endblock %}
+    </div>
+   
+   

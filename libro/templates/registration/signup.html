@@ -1,18 +1,42 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div class="container-login">
-        <h1>Registro</h1>
-        <form action="/signup/" method="POST">
-            {% csrf_token %}
-            {{form.as_p}}
+   <main class="container">
+    <div class="row">
+        <div class ="col-md-6 offset-md-4 mt-5">
+            <form action="/signup/" method="POST" class="card card-body">
+                <h1 class="text center">Registro</h1>
+                {% csrf_token %}
+                
+                <!--{{form}}--> 
+                <div class="mb-3">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="escribe tu nombre de usuario">
+                </div>
 
+                <div class="mb-3">
+                    <label for="password1">Contraseña:</label>
+                    <input type="password" id="password1" name="password1" class="form-control" placeholder="Escribe tu contraseña">
 
-            <button>
-                Registrarse
-            </button>
-           <div class="mensaje-error">{{error}}</div> 
-        </form>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password2">Confirma tu Contraseña:</label>
+                    <input type="password" id="password1" name="password2" class="form-control" placeholder="Confirma tu contraseña">
+
+                </div>
+
         
+        
+                <div class="text-center">
+                    <button class="btn btn-dark">
+                        Registrarse
+                    </button>
+                </div>
+               <div class="mensaje-error">{{error}}</div> 
+            </form>
+        </div>
+
     </div>
+   </main>
 
 {% endblock %}

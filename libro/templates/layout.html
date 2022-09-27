@@ -5,56 +5,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href='{% static "css/stylepage.css" %}'
+      type="text/css"
+    />
+
+    <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <nav class="menu-container">
-      <!-- burger menu
-      <input type="checkbox" aria-label="Toggle menu" />
-      <span></span>
-      <span></span>
-      <span></span> -->
+    <header>{% include 'navigatebar.html' %}</header>
 
-      <!-- logo -->
-      <a href="#" class="menu-logo">
-        <img src='{% static "img/navigate/logo.png" %}' alt="magicamente"
-        width="100px" />
-      </a>
+    <br />
 
-      <!-- menu items -->
-      <div class="menu">
-        <ul>
-          <li>
-            <a href="/home/" class="amenu"> Inicio </a>
-          </li>
-          <li>
-            <a href="#pricing" class="amenu"> Blog </a>
-          </li>
-          <li>
-            <a href="#blog" class="amenu"> Contacto </a>
-          </li>
-          <li>
-            <a href="#docs" class="amenu"> Acerca de nosotros </a>
-          </li>
+    <div class="page">
+      {% block imagenCentral %} {% endblock %}
+      {% block content3 %} {% endblock %}
+      <div class="content">
+        
 
-          {% if user.is_authenticated %}
-          
-          <li>
-            <a href="/logout/" class="amenu"> Logout </a>
-            
-          </li>
-          {% else %} 
-          <li>
-            <a href="/login/" class="amenu"> Login </a>
-          </li>
-          <li>
-            <a href="/signup/" class="amenu"> Registrarse </a>
-          </li>
-          {% endif %}
-        </ul>
+        <div
+          class="content1"
+          id="content1">
+          {% block content1 %} contenido 1{% endblock %}
+        </div>
+
+        <div
+          class="content2"
+          id="content2">
+          {% block content2 %} {% endblock %}
+        </div>
       </div>
-    </nav>
-
-    {% block content%} {% endblock %}
+    </div>
+    <footer class="footer _libro"></footer>
   </body>
 </html>

@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from libro.views import agradecimientos,  cargarHtml, magia2, parametros,  portada, shortcut, personaImportante, signout, signin, crearTask
 from libro.views import prologo1, prologo2, introduccion, introduccion2, magia1, magia2, magia3, fomr1, usuario1, magia4
-from libro.views import agua01, agua02, agua03, usuario, camera, crearUsuario, home, signup, dashboard, task, taskDetail
+from libro.views import agua01, agua02, agua03, usuario, camera, crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas
 
 
 urlpatterns = [
@@ -29,15 +29,18 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('creartarea/', crearTask, name='creartarea'),
     path('detalletarea/<int:task_id>/', taskDetail, name='taskdetail'),
+    path('detalletarea/<int:task_id>/completed', complete, name='completada'),
+    path('detalletarea/<int:task_id>/eliminar', delete, name='eliminar'),
     path('admin/', admin.site.urls),
     path('signup/', signup, name="signup"),
     path('logout/', signout, name='logout'),
     path('login/', signin, name='login'),
     path('', home, name='home'),
     path('task/', task , name="tareas"),
+    path('completadas/', completadas , name="completadas"),
     path('home/', home),
     path('dashboard/', dashboard, name='dashboard'),
-    path('portada1/', portada),
+    path('portada1/', portada, name="portada"),
     path('parametros/', parametros),
     path('cargador/', cargarHtml),
     path('shortcut/', shortcut),

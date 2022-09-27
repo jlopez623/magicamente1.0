@@ -4,4 +4,29 @@
 <h1>{{task.title}}</h1>
 
  {{task.id}}
+ {{error}}
+ <form method="POST" action="/task/">
+    {% csrf_token %}
+     {{form.as_p}}
+     <button>
+        Actualizar
+     </button>
+ </form>
+
+ <form method="POST" action="{% url 'completada' task.id %}">
+    {% csrf_token %}
+    <button>
+        completado
+    </button>
+
+ </form>
+
+ <form method="POST" action="{% url 'eliminar' task.id %}">
+    {% csrf_token %}
+    <button>
+        delete
+    </button>
+
+ </form>
+
 {% endblock %}

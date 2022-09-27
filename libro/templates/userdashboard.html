@@ -1,12 +1,48 @@
-{% extends 'layout.html' %}
-{% block content %}
-<h1>Bienvenido {{usuario}} estás en tu dashboard</h1>
+{% extends 'layout-home.html' %}
+{% block content3 %}
+{% load static %}
+<main class="container">
 
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis impedit fugit, doloribus temporibus sunt earum dolore nemo corporis? Ullam doloribus quaerat alias, aperiam animi ad quis sapiente doloremque ex ducimus?
-    Veniam voluptatum nesciunt necessitatibus repellendus consectetur vel maxime amet vitae dolorem reiciendis in laboriosam esse incidunt excepturi ipsam accusantium at, rerum aspernatur, iure consequatur dolores! Numquam veritatis optio vitae doloremque!
-    Aperiam, blanditiis delectus, dolores neque possimus est recusandae ea corrupti tempora natus temporibus soluta dolorem dolorum, eveniet vero! Praesentium, rerum perferendis delectus iure vel natus dignissimos recusandae fuga enim et!
-    In accusantium aliquid molestias nam itaque fugit error ipsum ducimus perferendis, dolore alias facere magni perspiciatis qui eum aspernatur quaerat, quia quo placeat corporis maiores autem. Molestiae mollitia tempora deserunt?
-    Ratione, nulla pariatur cupiditate non provident laboriosam fugiat voluptatibus ex facilis, quam quas, sit incidunt in. Aperiam veritatis autem voluptatem tempora! Ipsum animi soluta illum asperiores debitis assumenda non facilis.
-</p>
+    <section>
+        <br>
+        <br>
+        <h2>Bienvenido {{user}} </h2>
+
+        <br>
+        <br>
+
+        <div class="container row">
+
+
+
+            <div class="card m-lg-2" style="width: 18rem;">
+                <img src="{% static './img/portada.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">El Libro de mi vida</h5>
+                    <p class="card-text">Accede y empieza a crecer con el libro de mi vida</p>
+                    <a href="/portada1/" class="btn btn-dark">Libro</a>
+                </div>
+            </div>
+
+            <div class="card m-lg-2" style="width: 18rem;">
+                <img src="{% static './img/logo.png' %}" class="card-img-top" alt="..." style="height: 10rem;">
+                <div class="card-body " >
+                    <h5 class="card-title">Magicamente</h5>
+                    <p class="card-text">Conoce las Noticias y eventos de Magicamente</p>
+                    <a href="/dashboard/" class="btn btn-dark">Ver más</a>
+                </div>
+            </div>
+
+           
+
+
+
+
+
+
+    </section>
+
+
+
+</main>
 {% endblock %}
