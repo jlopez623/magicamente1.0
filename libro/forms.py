@@ -18,4 +18,4 @@ class UserForm(forms.ModelForm):
 
 
 class RegistrarForm(UserCreationForm):
-    pass 
+    pass
