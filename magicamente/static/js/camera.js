@@ -1,6 +1,8 @@
-(function() {
 
-    var streaming = false,
+
+/*(function() {
+
+    var streaming = true,
         video = document.querySelector('#video'),
         canvas = document.querySelector('#canvas'),
         photo = document.querySelector('#perfil'),
@@ -55,4 +57,4 @@
         ev.preventDefault();
     }, false);
 
-})();
+})();*/

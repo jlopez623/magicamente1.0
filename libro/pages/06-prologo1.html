@@ -1,5 +1,8 @@
 
-{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %} {% block content1 %}
+{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %}
+{% block imagenCentral %}
+<img src="{% static 'img/prologo2/imagen2.png' %}" alt="imagenCentral" class="imgcentral" id="imagenCentral"> <style>.imgcentral{margin-top:10%}</style>{% endblock %}
+{% block content1 %}
 
 
 <h2 class="cursiva-media">Prólogo 1</h2>

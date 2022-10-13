@@ -1,25 +1,28 @@
- {%block title %} yo {% endblock %} {% load static %} 
-
+ {% block title %} yo {% endblock %} {% load static %} 
+{% block content1 %}
 <div class="fotos">
 
     <img src="http://placekitten.com/g/320/261" id="perfil" alt="photo">
 
-    <button id="startbutton"> Guarda tu foto</button>
+    <button id="startbutton" class="btn btn-outline-secondary"> Guarda tu foto</button>
     <video id="video"></video>
 
     <canvas id="canvas"></canvas>
     <img src="http://placekitten.com/g/320/261" id="photo" alt="photo">
     <style>
         .fotos {
+            
             position: relative;
             flex-direction: column;
             justify-content: center;
             height: 860px;
             width: 850px;
             background-image: url("http://magicamente.com.co/wp-content/uploads/2022/07/la_persona_mas_importante.png");
+            
         }
         
         #startbutton {
+            
             margin-left: 45%;
             margin-top: 20px;
         }

@@ -1,16 +1,14 @@
-{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %} {% block content1 %}
-<!--<script src='{% static "js\camera.js" %}'></script>-->
 <div class="fotos">
 
     
 
     <button id="startbutton" class="btn btn-secondary"> guarda tu foto</button>
-    <video id="videofoto" autoplay="true" width="800px" height="800px">yo?</video>
+    <video id="videofoto" autoplay="true" width="800px" height="800px"></video>
     <script>
         const video1 = document.getElementById("videofoto")
         navigator.mediaDevices.getUserMedia({   
         audio: false,
-        video: true,
+        video: true
             }).then( (stream)=> {
                 video1.srcObject1= stream;
                 console.log(stream);
@@ -50,10 +48,3 @@
             z-index: -10;
         }
     </style>
-
-
-
-</div>
-{% endblock %} {% block content2 %}
-
-<img src='{% static "img/el_libro/el-libro.png" %}' class="full-image"> {% endblock %}

@@ -1,1 +1,18 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} {% load static %} {% block content1 %}
+<img src="{% static 'img/portada.png' %}" class="imgcentral" />
+
+{% endblock %} {% block content2 %}
+<img src="{% static 'img/portada2.png' %}" class="imgcentral" />
+
+<p class="center">
+  Cuando compartimos los regalos de la vida, estos se hacen <br />
+  más valiosos. Hoy queremos dejar este legado para todos <br />
+  aquellos que con amor buscan impregnar la vida de magia <br />
+  y alimentar su ser, para su crecimiento y evolución.
+  <br />
+  <span class="cursiva-media"
+    >Maricela García Alvarez y Gonzalo Álvarez Árias</span
+  >
+</p>
+
+{% endblock %}

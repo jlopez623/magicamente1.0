@@ -161,7 +161,7 @@ form.addEventListener("submit", function (event) {
   //document.getElementById('preguntascont').reset();
   inicio = inicio + 20;
   fin = fin + 20;
-  return listav, clear(), grafGen();
+  return listav, /*clear(),*/ grafGen();
 });
 
 function clear() {

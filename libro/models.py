@@ -1,12 +1,16 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+#from .choices import codigo_libro
 
 # Create your models here.
 class CodeBook(models.Model):
-    code=models.CharField(max_length=10)
+    code=models.CharField(max_length=10, #choices=codigo_libro
+    )
+    disponible = models.BooleanField(default=True, verbose_name='disponible' )
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
-        return self.code
+        return self.code 
 
 class Usuario (models.Model):
     
@@ -32,3 +36,5 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title + ' by ' + self.user.username
+
+

@@ -35,7 +35,7 @@ def signup(request):
             # reg user
             try:
                 user = User.objects.create_user(
-                    username=request.POST['username'], password=request.POST['password1'])
+                    username=request.POST['username'], password=request.POST['password1'], first_name = request.POST['first_name'], last_name = request.POST['last'], email=request.POST['email'])
                 user.save()
                 login(request, user)
                 return redirect('dashboard')
@@ -156,17 +156,11 @@ def delete(request, task_id):
         task.delete()
         return redirect('tareas')
 
-
 def portada(request):
-    # open doc
-    plantilla = open(
-        'D:/jlopezwebs/Gonzalo/magicamente/libro/templates/content.html')
-    # load template
-    template = Template(plantilla.read())
-    plantilla.close()
-    context = Context()
-    documento = template.render(context)
-    return HttpResponse(documento)
+    image = '{% static "img/p3/hoja3.pNG" %}'
+    context = Context({"imagenCentral": image})
+    return render(request, '01portada.html')
+
 
 
 def parametros(request):

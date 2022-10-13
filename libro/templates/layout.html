@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,14 +20,15 @@
 
     <div class="page">
       {% block imagenCentral %} {% endblock %}
-      {% block content3 %} {% endblock %}
+      {% block content3 %} 
+      
       <div class="content">
         
 
         <div
           class="content1"
           id="content1">
-          {% block content1 %} contenido 1{% endblock %}
+          {% block content1 %} {% endblock %}
         </div>
 
         <div
@@ -35,8 +36,12 @@
           id="content2">
           {% block content2 %} {% endblock %}
         </div>
+        {% endblock %}
       </div>
     </div>
-    <footer class="footer _libro"></footer>
+    
+      {% include 'footer.html' %}
+      
+    
   </body>
 </html>
