@@ -1,9 +1,9 @@
 from pipes import Template
-from unicodedata import name
+#from unicodedata import name
 from unittest import loader
 
 
-from xml.dom.minidom import Document
+
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import datetime
@@ -157,13 +157,15 @@ def delete(request, task_id):
         return redirect('tareas')
 
 def portada(request):
-    image = '{% static "img/p3/hoja3.pNG" %}'
-    context = Context({"imagenCentral": image})
-    return render(request, '01portada.html')
-
-
+    
+    anterior= '/dashboard/'
+    siguiente = '/agradecimientos/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '01portada.html', context )
 
 def parametros(request):
+
+
     menulibro = {"esto es pg": "1"}
     nombre_usuario = "usuario"
     date = datetime.datetime.now()
@@ -172,8 +174,7 @@ def parametros(request):
     # load template
     template = Template(plantilla.read())
     plantilla.close()
-    context = Context(
-        {"user": nombre_usuario, "fecha": date, "menu": menulibro})
+    context = Context({"user": nombre_usuario, "fecha": date, "menu": menulibro})
     documento = template.render(context)
     return HttpResponse(documento)
 
@@ -199,23 +200,26 @@ def shortcut(request):
 
 def agradecimientos(request):
     image = '{% static "img/p3/hoja3.pNG" %}'
-    context = Context({"imagenCentral": image})
-    return render(request, '04-agradecimientos-indice.html')
+    anterior= '/agradecimientos/'
+    siguiente = '/la-persona-importante/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '04-agradecimientos-indice.html', context)
 
 
 def personaImportante(request):
-
-    return render(request, '05-personaportada.html')
+    anterior= '/agradecimientos/'
+    siguiente = '/prologo1/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '05-personaportada.html', context)
 
 
 def prologo1(request):
-    data = {
-        "titulo": 'hola',
-        "siguiente": '07-prologo2.html/',
-        "anterior": '05-personaportada.html'
-    }
-
-    return render(request, '06-prologo1.html', data)
+    
+    anterior= '/la-persona-importante/'
+    siguiente = '/prologo2/'
+    context = {"anterior": anterior, "siguiente": siguiente}    
+    
+    return render(request, '06-prologo1.html', context)
 
 
 def home(request):
@@ -223,15 +227,24 @@ def home(request):
 
 
 def prologo2(request):
-    return render(request, '07-prologo2.html')
+    anterior= '/prologo1/'
+    siguiente = '/intro1/'
+    context = {"anterior": anterior, "siguiente": siguiente}    
+    return render(request, '07-prologo2.html',context)
 
 
 def introduccion(request):
-    return render(request, '08-introduccion1.html')
+    anterior= '/prologo2/'
+    siguiente = '/intro2/'
+    context = {"anterior": anterior, "siguiente": siguiente}  
+    return render(request, '08-introduccion1.html',context)
 
 
 def introduccion2(request):
-    return render(request, '09-introduccion2.html')
+    anterior= '/intro1/'
+    siguiente = '/magia01/'
+    context = {"anterior": anterior, "siguiente": siguiente}  
+    return render(request, '09-introduccion2.html', context)
 
 
 def magia1(request):

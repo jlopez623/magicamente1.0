@@ -21,11 +21,45 @@ font-family: 'Square Peg', cursive;
   box-sizing: border-box;
   user-select: none;
 }
+#preguntascont{
+  width:80%
+}
+.question{
+  margin-bottom:10px;
+}
+output{
+  padding-left:10px;
+}
+div.form-label{
+  width:90%
+}
+.range1{
+  display:flex;
+  flex-direction:row;
+  align-content:space-between;
+  width: 490px;
+}
 
 
 
-label{
- width: auto; 
+.next {
+  width: 20px;
+  padding:0%;
+  margin:0%;
+  display: flex;
+  scale:.1;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  color:#56595a;
+
+  
+  flex-direction: column;
+}
+
+label {
+  width: auto;
 }
 
 .container-nav ul {
@@ -56,7 +90,7 @@ section .recuadro {
 
 .portrait {
   margin: 0px;
-  height: 850px;
+  height: 840px;
 }
 
 p {
@@ -93,6 +127,7 @@ p {
   flex-direction: row;
   justify-content: center;
   margin-top: 5px;
+
 }
 
 .cursiva-media {
@@ -111,10 +146,9 @@ p {
   font-weight: 550;
 }
 
-
 .content1,
 .content2 {
-  width: 50%;
+  width: 45%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -152,16 +186,12 @@ p {
   );
 }
 
-
-
 .imgcentral {
   position: absolute;
   opacity: 30%;
 
   scale: 0.9;
   margin-left: 0%;
- 
-  
 }
 
 ol {
@@ -306,9 +336,6 @@ footer {
     border-radius: 50%;
   }
 }
-
-
-
 
 .backimage {
   margin-top: 10%;

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="1280.000000pt"
+   height="982.000000pt"
+   viewBox="0 0 1280.000000 982.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg8"
+   sodipodi:docname="fav-icon2.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12">
+    <linearGradient
+       id="linearGradient4843"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#d46cd4;stop-opacity:1;"
+         offset="0"
+         id="stop4841" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4843"
+       id="linearGradient4845"
+       x1="82.620239"
+       y1="655.06006"
+       x2="1288.875"
+       y2="655.06006"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76125244,0,0,0.76125244,114.14845,24.201681)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.31771894"
+     inkscape:cx="275.40064"
+     inkscape:cy="643.65064"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <metadata
+     id="metadata2">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+  <circle
+     style="fill:url(#linearGradient4845);fill-opacity:1;stroke-width:0.570939"
+     id="path36"
+     cx="636.17548"
+     cy="522.86774"
+     r="459.1322" />
+  <g
+     transform="matrix(0.06623061,0,0,-0.06623061,207.56064,847.01045)"
+     fill="#000000"
+     stroke="none"
+     id="g6"
+     style="fill:#ffef00;fill-opacity:1">
+    <path
+       d="M 2415,8723 C 1806,8651 1308,8433 870,8047 462,7688 236,7160 280,6672 c 27,-301 123,-529 301,-717 100,-105 184,-166 324,-236 223,-110 474,-156 798,-146 262,8 521,62 752,156 123,51 140,63 177,129 l 30,52 -30,64 c -27,57 -37,68 -81,90 -28,14 -60,26 -71,26 -12,0 -74,-18 -138,-40 -190,-64 -302,-83 -482,-84 -173,0 -274,18 -393,73 -181,82 -341,244 -427,434 -105,233 -113,588 -19,882 120,377 451,712 865,875 209,82 430,120 696,120 392,0 655,-91 876,-304 331,-319 398,-822 206,-1546 -14,-52 -345,-1157 -736,-2455 -391,-1298 -722,-2398 -735,-2445 -28,-102 -29,-151 -4,-206 24,-53 60,-80 128,-95 82,-19 530,29 607,64 136,62 207,173 295,457 341,1101 1040,2560 1799,3755 693,1091 1397,1935 1777,2129 59,30 80,36 133,36 59,0 66,-2 98,-34 24,-24 34,-44 35,-67 8,-182 -37,-428 -163,-879 -36,-131 -281,-976 -1209,-4165 -165,-566 -305,-1059 -311,-1095 -25,-153 48,-230 219,-230 32,0 151,9 264,19 240,22 273,32 353,114 66,68 115,163 201,392 385,1018 760,1824 1238,2660 442,772 848,1403 1257,1950 647,866 1188,1363 1334,1226 59,-56 58,-156 -3,-381 -50,-180 -180,-566 -301,-890 -163,-438 -366,-999 -488,-1351 -367,-1055 -529,-1636 -612,-2184 -28,-180 -38,-549 -20,-692 40,-319 157,-574 354,-768 139,-138 282,-217 471,-261 122,-29 370,-26 485,5 526,141 997,601 1925,1880 319,440 481,720 516,890 16,75 2,160 -38,241 l -28,55 h -65 -65 l -250,-371 c -849,-1261 -1397,-1912 -1821,-2167 -181,-108 -353,-119 -473,-30 -109,81 -185,230 -212,414 -17,117 -6,450 20,611 87,543 254,1088 806,2633 392,1099 572,1649 651,1995 38,166 41,344 6,463 -72,251 -246,428 -480,488 -142,36 -303,19 -470,-50 -684,-284 -1772,-1637 -2832,-3526 -206,-367 -232,-411 -226,-385 3,14 160,606 349,1315 354,1325 411,1549 448,1765 20,114 21,136 10,255 -23,274 -105,459 -257,585 -168,139 -428,176 -684,98 -680,-208 -1640,-1362 -2751,-3309 -87,-154 -171,-303 -185,-331 -14,-27 -27,-48 -30,-46 -2,3 37,135 87,294 149,471 167,530 225,738 159,573 246,1012 260,1317 24,510 -166,959 -551,1302 -307,273 -692,438 -1137,486 -90,10 -393,13 -463,4 z"
+       id="path4"
+       style="fill:#ffef00;fill-opacity:1" />
+  </g>
+</svg>

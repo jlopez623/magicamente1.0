@@ -111,10 +111,13 @@ static %} {% block content1 %}
           div.setAttribute("class", "question");
   
           label = document.createElement("label");
+          label.setAttribute("class","form-label")
           label.innerText = e;
-          p = document.createElement("p");
+          p = document.createElement("div");
+          p.setAttribute("class","range1")
   
           input = document.createElement("input");
+          input.setAttribute("class", "form-range")
           input.setAttribute("type", "range");
           input.setAttribute("name", "pregunta" + lista.indexOf(e));
           input.setAttribute("id", "id" + lista.indexOf(e));
@@ -184,14 +187,14 @@ static %} {% block content1 %}
       //document.getElementById('preguntascont').reset();
       inicio = inicio + 20;
       fin = fin + 20;
-      return listav, clear(), grafGen();
+      return listav, /*clear(),*/ grafGen();
     });
   
-    function clear() {
+    /*function clear() {
       console.log("limpiando");
       form2 = document.getElementById("preguntascont");
       form2.remove();
-    }
+    }*/
   
     function grafGen() {
       var listapruebas = listav;
@@ -360,12 +363,13 @@ static %} {% block content1 %}
 
 
 
+
 {% endblock %}
 
 
 
 {% block content2 %}
-
+<h2 class="cursiva-media">Tu Gráfica:</h2>
 <canvas id="chart"> canvas</canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 {% endblock %}

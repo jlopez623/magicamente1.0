@@ -10,6 +10,7 @@
       href='{% static "css/stylepage.css" %}'
       type="text/css"
     />
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
 
     <title>{% block title %} {% endblock %}</title>
   </head>
@@ -19,29 +20,29 @@
     <br />
 
     <div class="page">
-      {% block imagenCentral %} {% endblock %}
-      {% block content3 %} 
-      
-      <div class="content">
-        
+      {% block imagenCentral %} {% endblock %} {% block content3 %}{% endblock %}
 
-        <div
-          class="content1"
-          id="content1">
+      <div class="content">
+        <div class="next"> 
+          <a href= {{anterior}}> <img src="{% static 'img/navigate/back.png' %}" ></a>
+          
+        </div>
+        <div class="content1" id="content1">
           {% block content1 %} {% endblock %}
         </div>
 
-        <div
-          class="content2"
-          id="content2">
+        <div class="content2" id="content2">
           {% block content2 %} {% endblock %}
         </div>
-        {% endblock %}
+
+        <div class= "next">
+        <a href= {{siguiente}}> <img src="{% static 'img/navigate/next.png' %}" ></a>
+          
+        </div>
+        
       </div>
     </div>
-    
-      {% include 'footer.html' %}
-      
-    
+
+    <footer>{% include 'footer.html' %}</footer>
   </body>
 </html>

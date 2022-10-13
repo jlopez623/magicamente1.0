@@ -164,11 +164,11 @@ form.addEventListener("submit", function (event) {
   return listav, /*clear(),*/ grafGen();
 });
 
-function clear() {
+/*function clear() {
   console.log("limpiando");
   form2 = document.getElementById("preguntascont");
   form2.remove();
-}
+}*/
 
 function grafGen() {
   var listapruebas = listav;
