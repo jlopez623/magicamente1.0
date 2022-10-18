@@ -197,7 +197,7 @@ def shortcut(request):
 
     return render(request, 'plantilla parametros.html', {"user": nombre_usuario, "fecha": date, "menu": menulibro})
 
-
+@login_required
 def agradecimientos(request):
     image = '{% static "img/p3/hoja3.pNG" %}'
     anterior= '/agradecimientos/'
@@ -205,14 +205,14 @@ def agradecimientos(request):
     context = {"anterior": anterior, "siguiente": siguiente}
     return render(request, '04-agradecimientos-indice.html', context)
 
-
+@login_required
 def personaImportante(request):
     anterior= '/agradecimientos/'
     siguiente = '/prologo1/'
     context = {"anterior": anterior, "siguiente": siguiente}
     return render(request, '05-personaportada.html', context)
 
-
+@login_required
 def prologo1(request):
     
     anterior= '/la-persona-importante/'
@@ -225,60 +225,128 @@ def prologo1(request):
 def home(request):
     return render(request, 'home.html')
 
-
+@login_required
 def prologo2(request):
     anterior= '/prologo1/'
     siguiente = '/intro1/'
     context = {"anterior": anterior, "siguiente": siguiente}    
     return render(request, '07-prologo2.html',context)
 
-
+@login_required
 def introduccion(request):
     anterior= '/prologo2/'
     siguiente = '/intro2/'
     context = {"anterior": anterior, "siguiente": siguiente}  
     return render(request, '08-introduccion1.html',context)
 
-
+@login_required
 def introduccion2(request):
     anterior= '/intro1/'
     siguiente = '/magia01/'
     context = {"anterior": anterior, "siguiente": siguiente}  
     return render(request, '09-introduccion2.html', context)
 
-
+@login_required
 def magia1(request):
-    return render(request, '10-la-magia1.html')
+    anterior= '/intro2/'
+    siguiente = '/magia02/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '10-la-magia1.html', context)
 
-
+@login_required
 def magia2(request):
-    return render(request, '10-la-magia2.html')
+    anterior= '/magia01/'
+    siguiente = '/magia03/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '10-la-magia2.html', context)
 
-
+@login_required
 def magia3(request):
-    return render(request, '10-magia03.html')
+    anterior= '/magia02/'
+    siguiente = '/magia04/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '10-magia03.html',context)
 
-
+@login_required
 def magia4(request):
-    return render(request, '10-magia04.html')
+    anterior= '/magia03/'
+    siguiente = '/agua01/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '10-magia04.html', context)
 
-
+@login_required
 def agua01(request):
-    return render(request, '14-agua01.html')
+    anterior= '/magia04/'
+    siguiente = '/agua02/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '14-agua01.html', context)
 
-
+@login_required
 def agua02(request):
-    return render(request, "15-agua-02.html")
+    anterior= '/agua01/'
+    siguiente = '/agua03/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, "15-agua-02.html", context)
 
-
+@login_required
 def agua03(request):
+    anterior= '/magia02/'
+    siguiente = '/grafica1'
+    context = {"anterior": anterior, "siguiente": siguiente}
 
-    return render(request, '16-agua03.html')
+    return render(request, '16-agua03.html', context)
 
-
+@login_required
 def fomr1(request):
     return render(request, 'form1.html')
 
+@login_required
+def grafica1(request):
+    anterior= '/magia03/'
+    siguiente = '/grafica2/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '17-grafica.html',context)
+
+@login_required
+def grafica2(request):
+    anterior= '/grafica1/'
+    siguiente = '/actuar1/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '18-grafica.html',context)
+
+@login_required
+def actuar1(request):
+    anterior= '/grafica2/'
+    siguiente = '/quiensoy1/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '19-actuar1.html',context)
+
+@login_required
+def quiensoy1(request):
+    anterior= '/actuar1/'
+    siguiente = '/quiensoy2/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '20-quien-soy1.html',context)
+
+@login_required
+def quiensoy2(request):
+    anterior= '/quiensoy1/'
+    siguiente = '/aguaport/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '20-quien-soy2.html',context)
+
+@login_required
+def aguaport(request):
+    anterior= '/quiensoy1/'
+    siguiente = '/aguaport/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '21-paraviviragua.html',context)
 
 def usuario1(request):
     print("hola")

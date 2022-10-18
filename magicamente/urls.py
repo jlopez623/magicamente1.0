@@ -20,8 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 from libro.views import agradecimientos,  cargarHtml, magia2, parametros,  portada, shortcut, personaImportante, signout, signin, crearTask
-from libro.views import prologo1, prologo2, introduccion, introduccion2, magia1, magia2, magia3, fomr1, usuario1, magia4
-from libro.views import agua01, agua02, agua03, usuario, camera, crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas
+from libro.views import prologo1, prologo2, introduccion, introduccion2, magia1, magia2, magia3, fomr1, magia4
+from libro.views import agua01, agua02, agua03, usuario,  crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas, grafica1, grafica2, actuar1, quiensoy1, quiensoy2, aguaport
 
 
 urlpatterns = [
@@ -51,15 +51,20 @@ urlpatterns = [
     path('intro1/', introduccion, name='intro1'),
     path('intro2/', introduccion2, name="intro2"),
     path('magia01/', magia1, name="magia01"),
-    path('magia02/', magia2),
+    path('magia02/', magia2, name='magia03'),
     path('magia03/', magia3),
     path('magia04/', magia4),
     path('agua01/', agua01),
     path('agua02/', agua02),
     path('agua03/', agua03),
-    path('users/', usuario),
     path('registro/', crearUsuario, name='registro'),
-    path('yo/', camera),
+    path('grafica1/', grafica1, name='grafica1'),
+    path('grafica2/', grafica2, name='grafica2'),
+    path('actuar1/', actuar1, name='actuar1'),
+    path('quiensoy1/', quiensoy1, name='quiensoy1'),
+    path('quiensoy2/', quiensoy2, name='quiensoy2'),
+    path('aguaport/', aguaport, name='aguaport'),
+    
 
     path('form1/', fomr1),
     path('form1/user/', usuario)

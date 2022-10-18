@@ -126,10 +126,14 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 5px;
+  margin-top: 0px;
 
 }
-
+.cursiva-grande {
+  text-align: center;
+  font-family: "Square peg", cursive;
+  font-size: 70px;
+}
 .cursiva-media {
   text-align: center;
   font-family: "Square peg", cursive;
@@ -139,8 +143,8 @@ p {
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height: 850px;
+  
+  height: 800px;
   width: 100%;
   font-family: "PT Sans", sans-serif;
   font-weight: 550;
@@ -148,9 +152,9 @@ p {
 
 .content1,
 .content2 {
-  width: 45%;
+  width: 50%;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
   -webkit-box-shadow: 4px 3px 5px 4px rgba(150, 150, 150, 1);
   -moz-box-shadow: 4px 3px 5px 4px rgba(150, 150, 150, 1);
@@ -178,6 +182,7 @@ p {
   display: flex;
   margin-right: 0px;
   margin-left: 3%;
+  padding-left: 3%;
   background: rgb(255, 255, 231);
   background: linear-gradient(
     90deg,
@@ -188,7 +193,7 @@ p {
 
 .imgcentral {
   position: absolute;
-  opacity: 30%;
+  opacity: 20%;
 
   scale: 0.9;
   margin-left: 0%;
@@ -220,15 +225,7 @@ ol {
   border-radius: 50%;
 }
 
-footer {
-  height: 50px;
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  font-size: smaller;
-  color: rgb(116, 116, 117);
-}
+
 
 @media only screen and (max-width: 767px) {
   .portrait {
