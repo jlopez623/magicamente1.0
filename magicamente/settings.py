@@ -63,8 +63,9 @@ ROOT_URLCONF = 'magicamente.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:/jlopezwebs/Gonzalo/magicamente/libro/templates/',
-        'D:/jlopezwebs/Gonzalo/magicamente/libro/pages/'],
+        #'DIRS': ['D:/jlopezwebs/Gonzalo/magicamente/libro/templates/',
+        #'D:/jlopezwebs/Gonzalo/magicamente/libro/pages/'],
+	'DIRS':[os.path.join(BASE_DIR, 'templates', 'pages')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
