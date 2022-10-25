@@ -157,7 +157,7 @@ def delete(request, task_id):
         return redirect('tareas')
 
 def portada(request):
-    
+
     anterior= '/dashboard/'
     siguiente = '/agradecimientos/'
     context = {"anterior": anterior, "siguiente": siguiente}
@@ -214,11 +214,11 @@ def personaImportante(request):
 
 @login_required
 def prologo1(request):
-    
+
     anterior= '/la-persona-importante/'
     siguiente = '/prologo2/'
-    context = {"anterior": anterior, "siguiente": siguiente}    
-    
+    context = {"anterior": anterior, "siguiente": siguiente}
+
     return render(request, '06-prologo1.html', context)
 
 
@@ -229,7 +229,7 @@ def home(request):
 def prologo2(request):
     anterior= '/prologo1/'
     siguiente = '/intro1/'
-    context = {"anterior": anterior, "siguiente": siguiente}    
+    context = {"anterior": anterior, "siguiente": siguiente}
     return render(request, '07-prologo2.html',context)
 
 @login_required
