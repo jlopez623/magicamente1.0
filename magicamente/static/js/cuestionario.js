@@ -35,8 +35,8 @@ const lista1 = [
   "31 ¿Cuido el planeta ahorrando agua y energía? \n*La recomendación es apagar las luces que no sean necesariasa y utilizar solo el agua necesaria.?",
   "32 ¿Qué tan conconsciente soy de mi respiración? \n*El aire oxigena el cerebro y te ayuda a descansar",
   "33 ¿Me cosidero una persona espiritual, quien busca cada día ser mejor?",
-  "34 ¿Deposito la basura en la caneca correspondiente siempre?\nOrgánico, Ordinario, Reciclable",
-  "35 ¿Tengo alguna herramienta que me ayude a enfocar mis sueños?\nEj. Mapa de los sueños.",
+  "34 ¿Deposito la basura en la caneca correspondiente siempre?\n Orgánico, Ordinario, Reciclable",
+  "35 ¿Tengo alguna herramienta que me ayude a enfocar mis sueños?\n Ej. Mapa de los sueños.",
   "36 ¿Llevo registro por escrito de todos mis ingresos y egresos de cada mes?",
   "37 ¿Tengo interés permanente en aprender y sé lo que quiero aprender?",
   "38 ¿Qué tanto sé administrarmi dinero?",
@@ -318,11 +318,13 @@ function grafGen() {
         label: "Tu resultado",
         backgroundColor: "rgba(0,150,80,0.5)",
         data: dataUser,
+        fill: true,
       },
       {
         label: "Recomendado",
         backgroundColor: "rgba(255,0,0,0.2)",
         data: [800, 800, 800, 800, 800, 800, 800, 800, 800, 800],
+        fill:true,
       },
     ],
   };
@@ -331,4 +333,5 @@ function grafGen() {
     type: "radar",
     data: marksData,
   });
+  
 }

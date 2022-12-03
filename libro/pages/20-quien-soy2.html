@@ -1,26 +1,143 @@
 {% extends 'layout.html' %} {% load static %} {% block content1 %}
 
-<img src="{% static 'img/20/01.png' %}" class="imgcentral"/>
+<img src="{% static 'img/20/01.png' %}" class="imgcentral" />
 
-<h2 class="cursiva-media">¿En que creo que soy exitoso y por que?<h2>
+<div style="display: flex; flex-direction: column;">
+  <span class="cursiva-media">
+    ¿EN QUÉ CREO QUE SOY EXITOSO <br> Y POR QUÉ?
+  </span>
+      <p class="center">Contesta de la misma forma</p>
+  
+</div>
+    <form>
+      <div class="qs">
+        <label for="1">1.</label>
+        <input type="textarea" name="1" placeholder="" size="60" />
+      </div>
 
-<span class="center">
-    Contesta de la misma forma
+      <div class="qs">
+        <label for="2">2.</label>
+        <input type="textarea" name="2" placeholder="" size="60" />
+      </div>
 
-</span>
+      <div class="qs">
+        <label for="3">3.</label>
+        <input type="textarea" name="3" placeholder="" size="60" />
+      </div>
 
+      <div class="qs">
+        <label for="4">4.</label>
+        <input type="textarea" name="4" placeholder="" size="60" />
+      </div>
 
-<form>
-    
-    <div class="qs" >
-      <label for= '1'>1.</label>
-      <input type="text" name="1" placeholder="________________________" size="30" required/>
-    </div>
-  </form>
+      <div class="qs">
+        <label for="5">5.</label>
+        <input type="textarea" name="5" placeholder="" size="60" />
+      </div>
 
+      <div class="qs">
+        <label for="6">6.</label>
+        <input type="textarea" name="6" placeholder="" size="60" />
+      </div>
 
-{% endblock content1 %}
+      <div class="qs">
+        <label for="7">7.</label>
+        <input type="textarea" name="7" placeholder="" size="60" />
+      </div>
 
-{% block content2 %}
-<img src="{% static 'img/20/02.png' %}" class="imgcentral"/>
-{% endblock content2 %}
+      <div class="qs">
+        <label for="8">8.</label>
+        <input type="textarea" name="8" placeholder="" size="60" />
+      </div>
+
+      <div class="qs">
+        <label for="9">9.</label>
+        <input type="textarea" name="9" placeholder="" size="60" />
+      </div>
+
+      <div class="qs">
+        <label for="10">10.</label>
+        <input type="textarea" name="10" placeholder="" size="60" />
+      </div>
+
+      {% endblock content1 %} {% block content2 %}
+
+      <img src="{% static 'img/20/02.png' %}" class="imgcentral" />
+
+      <div class="qs">
+        <label for="11">11.</label>
+        <input type="textarea" name="11" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="12">12.</label>
+        <input type="textarea" name="12" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="13">13.</label>
+        <input type="textarea" name="13" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="14">14.</label>
+        <input type="textarea" name="14" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="15">15.</label>
+        <input type="textarea" name="15" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="16">16.</label>
+        <input type="textarea" name="16" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="17">17.</label>
+        <input type="textarea" name="17" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="18">18.</label>
+        <input type="textarea" name="18" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="19">19.</label>
+        <input type="textarea" name="19" placeholder="" size="60" />
+      </div>
+      <br />
+      <div class="qs">
+        <label for="20">20.</label>
+        <input type="textarea" name="20" placeholder="" size="60" />
+      </div>
+      <div class="qs">
+        <label for="21">21.</label>
+        <input type="textarea" name="21" placeholder="" size="60" />
+      </div>
+      <div class="qs">
+        <label for="22">22.</label>
+        <input type="textarea" name="22" placeholder="" size="60" />
+      </div>
+      <div class="qs">
+        <label for="23">23.</label>
+        <input type="textarea" name="23" placeholder="" size="60" />
+      </div>
+
+      <br />
+      <br />
+      <button
+        class="btn btn-dark"
+        id="btn-guardar"
+        onclick="{guardar(e)}"
+        style="z-index: 3"
+      >
+        Guardar
+      </button>
+    </form>
+
+    {% endblock content2 %}
+  </h3>
+</h3>

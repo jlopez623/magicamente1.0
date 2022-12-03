@@ -1,25 +1,19 @@
 
-<img src="{% static 'img/21/01.png' %}" class="portrait"/>
-
-<h2 class="cursiva-media">¿En que creo que soy exitoso y por que?<h2>
-
-<span class="center">
-    Contesta de la misma forma
-
-</span>
 
 
-<form>
-    
-    <div class="qs" >
-      <label for= '1'>1.</label>
-      <input type="text" name="1" placeholder="________________________" size="30" required/>
-    </div>
-  </form>
+
+{% extends 'layout.html' %}{% load static %}  
+
+{% block content1 %}
+
+<img src="{% static 'img/elemento-agua/01.png' %}" class="imgcentral-i"/> 
+
+
+
 
 
 {% endblock content1 %}
 
 {% block content2 %}
-<img src="{% static 'img/20/02.png' %}" class="imgcentral"/>
+<img src="{% static 'img/elemento-agua/02.png' %}" class="imgcentral-d"/>
 {% endblock content2 %}

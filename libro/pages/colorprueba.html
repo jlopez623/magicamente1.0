@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <canvas id="main-canvas" width="700" height="700"></canvas>
+        <span class="spani">
+          <input type="color" id="color" oninput="defcolor(this.value);" />
+          <input
+            type="range"
+            id="grosor"
+            oninput="defgrosor(this.value);"
+            min="1"
+            max="30"
+            value="3"
+          />
+        </span>
+      
+      <script>
+        const mainCanvas = document.querySelector("#main-canvas");
+        const context = mainCanvas.getContext("2d");
+        const rect = mainCanvas.getBoundingClientRect();
+      
+        let initialX = 0;
+        let initialY = 0, dibujando = false, color='black', grosor=1;
+      
+        function dibujar(x1, y1, x2, y2){
+      
+            context.beginPath();
+            context.strokeStyle=color;
+            context.lineWidth=grosor;
+            context.moveTo(x1,y1);
+            context.lineTo(x2,y2);
+            context.stroke();
+            context.closePath();
+            console.log('dibuja')     
+      
+        }
+      
+      
+        function defcolor(c){
+            color = c;
+        }
+      
+        function defgrosor(g){
+            grosor = g;
+        }
+      
+        mainCanvas.addEventListener('mousedown',function(e){
+            initialX= e.clentX - rect.left;
+            initialY= e.clentY - rect.top;
+            dibujando = true;
+            console.log('mousedown')
+      
+        });
+      
+        mainCanvas.addEventListener('mousemove', function(e){
+      
+            if(dibujando===true){
+                dibujar(initialX, initialY, e.clentX-rect.left, e.clentY-rect.top);
+      
+                initialX= e.clentX - rect.left
+                initialY= e.clentY - rect.top
+                console.log('moving')
+      
+            }
+      
+        })
+      
+        mainCanvas.addEventListener('mouseup', function(e){
+            if (dibujando===true){
+                dibujar(initialX, initialY, e.clentX - rect.left, e.clentY - rect.top);
+                initialX = 0;
+                initialY = 0;
+                dibujando = false;
+                console.log('alza')
+            }
+        })
+      </script>
+    
+</body>
+</html>

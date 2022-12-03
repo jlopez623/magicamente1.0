@@ -1,34 +1,116 @@
-{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %} {% block content1 %}
+{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load
+static %} {% block content1 %}
 
 
-<img src="{% static 'img/color/LibroDeMiVidaN.png' %}" alt="" class="portrait">
-<div class="container">
-    <div id="amarillo"></div>
-    <div id="azul"></div>
-    <div id="rojo"></div>
-    <div id="naranja"></div>
-    <div id="azul2"></div>
-    <div id="verde"></div>
-    <div id="verde2"></div>
+<main class="main-container">
+  <canvas id="main-canvas" width="700" height="700"></canvas>
+  <span class="spani">
+    <input type="color" id="color" oninput="defcolor(this.value);" />
+    <input
+      type="range"
+      id="grosor"
+      oninput="defgrosor(this.value);"
+      min="1"
+      max="30"
+      value="10"
+    />
+  </span>
+</main>
 
-</div>
+<script>
+  const mainCanvas = document.querySelector("#main-canvas");
+  let context = mainCanvas.getContext("2d");
+  let rect = mainCanvas.getBoundingClientRect();
+
+  let initialX = 0;
+  let initialY = 0, dibujando = false, color='black', grosor=1;
+
+  function dibujar(x1, y1, x2, y2){
+
+      context.beginPath();
+      context.strokeStyle=color;
+      context.lineWidth=grosor;
+      context.moveTo(x1,y1);
+      context.lineTo(x2,y2);
+      context.stroke();
+      context.closePath();
+
+
+  }
+
+
+  function defcolor(c){
+      color = c;
+  }
+
+  function defgrosor(g){
+      grosor = g;
+  }
+
+  mainCanvas.addEventListener('mousedown',function(e){
+      initialX= e.clentX-rect.left;
+      initialY= e.clentY-rect.top;
+      dibujando = true;
+      console.log('mousedown')
+
+  });
+
+  mainCanvas.addEventListener('mousemove', function(e){
+
+      if(dibujando===true){
+          dibujar(initialX, initialY, e.clentX-rect.left, e.clentY-rect.top);
+
+          initialX= e.clentX - rect.left
+          initialY= e.clentY - rect.top
+
+
+      }
+
+  })
+
+  mainCanvas.addEventListener('mouseup', function(e){
+      if (dibujando===true){
+          dibujar(initialX, initialY, e.clentX - rect.left, e.clentY - rect.top);
+          initialX = 0;
+          initialY = 0;
+          dibujando = false;
+      }
+  })
+</script>
 
 {% endblock %} {% block content2 %}
 
-<h2 class="cursiva-media"> la magia</h2>
+<h2 class="cursiva-media">la magia</h2>
 
 <p>
-
-    <br> La magia vive en la inocencia de la transformación, es espontánea y surge de la mente de cada ser. La magia trasciende lo percibido por los sentidos, pues surge de la consciencia. Hablamos de la magia como inspiración, creatividad y entusiasmo.
-    <br> Para ilustrarte mejor sobre este concepto, viene a mi mente la historia de un maestro y su joven discípulo, aprendiz de mago, quienes, a través de la observación de la naturaleza y su flujo en el mundo, logran comprender las singularidades de
-    la consciencia, la mente humana y la relación que existe entre ambos aspectos y la magia.
-    <br><br> ¿Qué es la magia? Preguntó el joven discípulo a su maestro.
-    <br> Tras varios segundos de silencio, el maestro respondió: <br> - La magia, mi querido aprendiz, es transformación. <br> ¿A qué te refieres con transformación? Inquirió el joven discípulo <br> - Transformación es cambio, Dime, ¿Has visto alguna
-    vez cómo nace una mariposa? <br> Sí, maestro, alguna vez pude ver el proceso. <br> -Bien, dime ¿qué fue lo que más llamó tu atención? <br> Lo que más llamó mi atención fue ver cómo con el paso de cada hora su forma nunca fue la misma, siempre estaba
-    cambiando de un estado a otro en poco tiempo; Finalmente, cuando terminó de romper su capullo y abrió sus alas, fue maravilloso verla emprender el vuelo. <br> <br> -El maestro, mirándole fijamente y con una dulce sonrisa, le dijo: <br> - Eso que has
-    visto es la transformación, todo bajo el cielo que cobija nuestra existencia vive de este modo, en cambio permanente, instante tras instante. Has de estar atento para aprender a ver el cambio en cada cosa, y ser consciente de todo lo que ocurre en
-    la naturaleza y cómo lo vive tu mente.
-
+  <br />
+  La magia vive en la inocencia de la transformación, es espontánea y surge de
+  la mente de cada ser. La magia trasciende lo percibido por los sentidos, pues
+  surge de la consciencia. Hablamos de la magia como inspiración, creatividad y
+  entusiasmo. <br />
+  Para ilustrarte mejor sobre este concepto, viene a mi mente la historia de un
+  maestro y su joven discípulo, aprendiz de mago, quienes, a través de la
+  observación de la naturaleza y su flujo en el mundo, logran comprender las
+  singularidades de la consciencia, la mente humana y la relación que existe
+  entre ambos aspectos y la magia. <br /><br />
+  ¿Qué es la magia? Preguntó el joven discípulo a su maestro. <br />
+  Tras varios segundos de silencio, el maestro respondió: <br />
+  - La magia, mi querido aprendiz, es transformación. <br />
+  ¿A qué te refieres con transformación? Inquirió el joven discípulo <br />
+  - Transformación es cambio, Dime, ¿Has visto alguna vez cómo nace una
+  mariposa? <br />
+  Sí, maestro, alguna vez pude ver el proceso. <br />
+  -Bien, dime ¿qué fue lo que más llamó tu atención? <br />
+  Lo que más llamó mi atención fue ver cómo con el paso de cada hora su forma
+  nunca fue la misma, siempre estaba cambiando de un estado a otro en poco
+  tiempo; Finalmente, cuando terminó de romper su capullo y abrió sus alas, fue
+  maravilloso verla emprender el vuelo. <br />
+  <br />
+  -El maestro, mirándole fijamente y con una dulce sonrisa, le dijo: <br />
+  - Eso que has visto es la transformación, todo bajo el cielo que cobija
+  nuestra existencia vive de este modo, en cambio permanente, instante tras
+  instante. Has de estar atento para aprender a ver el cambio en cada cosa, y
+  ser consciente de todo lo que ocurre en la naturaleza y cómo lo vive tu mente.
 </p>
 
 {% endblock %}

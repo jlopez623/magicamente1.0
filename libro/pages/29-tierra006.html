@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+    <div style="height: 100px;">
+
+    </div>
+  <h3>Ejemplo:</h3>
+  <h3 class="cursiva-media" style="font-weight: 600;"> 
+    
+
+    Mi camino es brindar herramientas, que permitan un <br> autoconocimiento en
+    las personas para encontrarle el sentido <br> a la vida.
+
+    
+</h3>
+
+<img src="{% static 'img/elemento-tierra/08.png' %}" class="" />
+
+<p class="center" >
+    Es el momento de escribir para qué viniste a este mundo, ten muy presente la
+    repuesta que diste sobre quién eres tú y así mismo presta mucha atención al
+    cuadro anterior en donde diste claridad a las cosas y personas que son
+    importantes para ti.
+</p>
+
+
+{% endblock content1 %} {% block content2 %}
+
+<h4>Escribe tu camino como el gran propósito de tu existencia.</h4>
+
+<h2 class="cursiva-media">mi Camino es:</h2>
+
+
+<form action="">
+
+    <div class="qs" >
+        <label for="1"> 1.</label>
+        <input type="textarea" name="1" placeholder="" size="60"  />
+      </div>
+      
+      <div class="qs">
+        <label for="2">2.</label>
+        <input type="textarea" name="2" placeholder="" size="60"  />
+      </div>
+      
+      <div class="qs">
+        <label for="3"> 3.</label>
+        <input type="textarea" name="3" placeholder="" size="60"  />
+      </div>
+      
+      <div class="qs">
+        <label for="4"> 4.</label>
+        <input type="textarea" name="4" placeholder="" size="60"  />
+      </div>
+      
+      <div class="qs">
+        <label for="5"> 5.</label>
+        <input type="textarea" name="5" placeholder="" size="60"  />
+      </div>
+      
+      <div class="qs">
+        <label for="6"> 6.</label>
+        <input type="textarea" name="6" placeholder="" size="60"  />
+      </div>
+
+      <button  class="btn btn-dark " id="btn-guardar" onSubmit={guardar(e)} style="z-index: 3;" >Guardar </button>
+
+</form>
+
+{% endblock content2 %}

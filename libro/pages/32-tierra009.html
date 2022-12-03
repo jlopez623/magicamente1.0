@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<img src="{% static 'img/elemento-tierra/12.png' %}" class="imgcentral-i" />
+
+<div style="height: 100px"></div>
+<h3 style="z-index: 5;">Ejemplo:</h3>
+<h3 class="cursiva-media" style="font-weight: 600; font-size: 36px; z-index: 5;">
+  - Ser un guía de experiencias positivas <br />
+  - Ser un líder transformador de la comunidad <br />
+  - Ser un puente o un canal que conecte las personas <br />
+</h3>
+
+{% endblock content1 %} {% block content2 %}
+<img src="{% static 'img/elemento-tierra/13.png' %}" class="imgcentral-d" style="z-index:0 ;"/>
+
+<p class="amatic2" style="z-index: 5; font-size: 30px;">
+  En la verdad de la tierra que recorren tus pasos, está el  <br> propósito de tu
+  camino, ánimo para escribir tu “destino”.
+</p>
+
+<h2 class="cursiva-media" style="z-index: 5;" >mi Destino es:</h2>
+
+<form action="" style="z-index: 5;">
+  <div class="qs">
+    <label for="1"> 1.</label>
+    <input type="textarea" name="1" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="2">2.</label>
+    <input type="textarea" name="2" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="3"> 3.</label>
+    <input type="textarea" name="3" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="4"> 4.</label>
+    <input type="textarea" name="4" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="5"> 5.</label>
+    <input type="textarea" name="5" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="6"> 6.</label>
+    <input type="textarea" name="6" placeholder="" size="60" />
+  </div>
+
+  <button
+    class="btn btn-dark"
+    id="btn-guardar"
+    onSubmit="{guardar(e)}"
+    style="z-index: 3"
+  >
+    Guardar
+  </button>
+</form>
+
+<p class="center">
+  Te sugerimos escribir en una hoja muy especial, que parezca un pergamino, este <br>
+  destino. Puedes hacer una copia para tu casa, otra para tu trabajo y otra para <br>
+  tu billetera, de manera que te acompañe siempre con el fin de recordarlo con <br>
+  frecuencia, examinar los avances y vivirlo mejor. 
+</p>
+
+{% endblock content2 %}

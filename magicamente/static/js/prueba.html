@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main class="main-container">
+        <canvas id="main-canvas" width="700" height="700"></canvas>
+        <span class="spani">
+            <input type="color" id="color"  oninput="defcolor(this.value);">
+            <input type="range" id="grosor" oninput="defgrosor(this.value);" min='1' max="30" value="10">
+        </span>
+        
+    </main>
+    
+    <script src="./colors.js"  > </script>
+</body>
+</html>

@@ -200,7 +200,7 @@ def shortcut(request):
 @login_required
 def agradecimientos(request):
     image = '{% static "img/p3/hoja3.pNG" %}'
-    anterior= '/agradecimientos/'
+    anterior= '/portada1/'
     siguiente = '/la-persona-importante/'
     context = {"anterior": anterior, "siguiente": siguiente}
     return render(request, '04-agradecimientos-indice.html', context)
@@ -290,11 +290,19 @@ def agua02(request):
 
 @login_required
 def agua03(request):
-    anterior= '/magia02/'
+    anterior= '/agua02/'
     siguiente = '/grafica1'
     context = {"anterior": anterior, "siguiente": siguiente}
 
     return render(request, '16-agua03.html', context)
+
+@login_required
+def tabla(request):
+    anterior= '/agua03/'
+    siguiente = '/grafica2'
+    context = {"anterior": anterior, "siguiente": siguiente}
+
+    return render(request, 'tabla.html', context)
 
 @login_required
 def fomr1(request):
@@ -302,7 +310,7 @@ def fomr1(request):
 
 @login_required
 def grafica1(request):
-    anterior= '/magia03/'
+    anterior= '/agua03/'
     siguiente = '/grafica2/'
     context = {"anterior": anterior, "siguiente": siguiente}
     
@@ -342,11 +350,115 @@ def quiensoy2(request):
 
 @login_required
 def aguaport(request):
-    anterior= '/quiensoy1/'
-    siguiente = '/aguaport/'
+    anterior= '/quiensoy2/'
+    siguiente = '/agua001/'
     context = {"anterior": anterior, "siguiente": siguiente}
     
     return render(request, '21-paraviviragua.html',context)
+
+@login_required
+def agua001(request):
+    anterior= '/aguaport/'
+    siguiente = '/agua002/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '22-paraviviragua2.html',context)
+    
+@login_required
+def agua002(request):
+    anterior= '/agua001/'
+    siguiente = '/tierra001/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '23-paraviviragua3.html',context)
+
+@login_required
+def tierra001(request):
+    anterior= '/agua003/'
+    siguiente = '/tierra002/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '24-tierra.html',context)
+
+@login_required
+def tierra002(request):
+    anterior= '/tierra001/'
+    siguiente = '/tierra003/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '25-tierra002.html',context)
+
+@login_required
+def tierra003(request):
+    anterior= '/tierra002/'
+    siguiente = '/tierra004/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '26-tierra003.html',context)
+
+@login_required
+def tierra004(request):
+    anterior= '/tierra003/'
+    siguiente = '/tierra005/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '27-tierra004.html',context)
+@login_required
+def tierra005(request):
+    anterior= '/tierra003/'
+    siguiente = '/tierra006/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '28-tierra005.html',context)
+
+@login_required
+def tierra006(request):
+    anterior= '/tierra005/'
+    siguiente = '/tierra007/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '29-tierra006.html',context)
+
+@login_required
+def tierra007(request):
+    anterior= '/tierra006/'
+    siguiente = '/tierra008/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '30-tierra007.html',context)
+
+@login_required
+def tierra008(request):
+    anterior= '/tierra007/'
+    siguiente = '/tierra009/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '31-tierra008.html',context)
+
+@login_required
+def tierra009(request):
+    anterior= '/tierra008/'
+    siguiente = '/tierra010/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '32-tierra009.html',context)
+
+@login_required
+def tierra010(request):
+    anterior= '/tierra009/'
+    siguiente = '/tierra011/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '33-tierra010.html',context)
+
+@login_required
+def tierra011(request):
+    anterior= '/tierra010/'
+    siguiente = '/tierra012/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '34-tierra011.html',context)
+
 
 def usuario1(request):
     print("hola")
