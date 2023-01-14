@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<span class="cursiva-media" style="font-size: 40px; color:rgb(120, 33, 120)">
+  Preguntas claves para evaluar que tan válidas son tus creencias</span>
+
+
+<div>
+  <p style="text-align: center;">
+    <br> <br>
+    Evaluar tus creencias te permite entenderlas mejor, es por eso que te sugerimos algunas preguntas para que sigas profundizando en el origen de tus creencias. Responde con honestidad, recuerda que es un trabajo que estás elaborando para poder crecer,  con el fin de que el elemento aire fluya en ti.
+    <br>
+  </p>
+</div>
+
+
+
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Quién lo dice o de dónde la aprendiste?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="4" style="background-color: rgb(240, 217, 246)"></textarea>
+</div>
+
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Esta creencia te ha ayudado para mejorar tu vida? ¿O te ha causado problemas y conflictos?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="4" style="background-color: rgb(240, 217, 246);"></textarea>
+</div>
+
+
+
+
+
+{% endblock content1 %} {% block content2 %}
+
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Qué pensaría sobre tu creencia una persona que admiras? 
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="3" style="background-color: rgb(240, 217, 246)"></textarea>
+</div>
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Si miras tu creencia desde otro punto de vista, la situación podría mejorar?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="3" style="background-color: rgb(240, 217, 246)"></textarea>
+</div>
+
+<div class="pregunta" style="margin-left:10%">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Qué tal si te imaginas en una situación limitante, de una forma jocosa o divertida, de manera que te permita cambiar esa creencia? 
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="3" style="background-color: rgb(240, 217, 246); " ></textarea>
+</div>
+
+<button class="btn btn-dark" id="btn-guardar" onSubmit="{guardar(e)}" style="z-index: 3; margin:10px ">  Guardar </button>
+
+
+{% endblock content2 %}

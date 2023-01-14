@@ -2,6 +2,90 @@
 
 
     <img src='{% static "img/agua/yo1.png" %}' alt="" class="imgcentral-i">
+    <div style="position: relative;">
+
+        <div class="yo1" style="z-index: 5;">
+            <form action="">
+             <input type="text" > <button class="btn btn-primary bg-dark" id="1" onclick="mostrar(1)" >Descubrir</button>
+             
+            </form>
+            
+        </div>
+
+         <p id="msn1" ></p>
+         <div class="yo2" style="z-index: 5;">
+             <form action="">
+                 <input type="text" > <button class="btn btn-primary bg-dark" id="2" onclick="mostrar(2)" >Descubrir</button>
+                </form>
+                
+         </div>
+         <div id="msn1" ></div>
+         <div class="yo3" style="z-index: 5;">
+             <form action="">
+                 <input type="text" > <button class="btn btn-primary bg-dark" id="3" onclick="mostrar(3)">Descubrir</button>
+                </form>
+                
+         </div>
+         <div id="msn1" ></div>
+    </div>
+    <style>
+
+        .yo1{
+            display: flex;
+            flex-direction: row;
+            margin-left: 25%;
+            margin-bottom: 30%;  
+            margin-top: 15%;  
+        }
+
+        .yo2{
+
+            display: flex;
+            flex-direction: row;
+            margin-left: 25%;    
+            margin-bottom: 30%; 
+        }
+
+        .yo3{
+            display: flex;
+            flex-direction: row;
+            margin-left: 25%;  
+
+        }
+
+
+        form{
+            display: flex;
+            flex-direction: row;
+            
+        }
+    </style>
+    <script>
+         function mostrar(id){
+            event.preventDefault()
+           document.getElementById(id)
+           switch(id){
+            case 1: {
+                let msn = document.getElementById('msn1')
+                msn.innerHTML('Merezco todo lo mejor del universo.')
+                console.log("Merezco todo lo mejor del universo.")
+        
+                 }
+            case 2: {
+                 console.log("Estoy abierto y receptivo a todo lo bueno del universo.")
+            
+                     }
+            case 3: {
+                        console.log("soy el hijo del ser más rico y maravilloso del universo y por eso declaro mi herencia divina ahora.")
+                
+                         }
+            
+           }
+            
+
+        }
+
+    </script>
    
 
 {% endblock %} {% block content2 %}

@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<p style="text-align:center">
+    En el ejercicio anterior tuviste la posibilidad de expresar y clasificar algunas de tus creencias y también de determinar aquellas que te limitan en tu crecimiento. Una creencia generalmente viene acompañada de acciones que definen el resultado de lo que emprendes. En esta parte de tu proceso vas a elegir cinco de tus creencias limitantes y vas a escribirlas y a definir cuáles son tus acciones frente a ellas. 
+</p>
+
+<form action="" style="z-index: 5;">
+    <div class="qs">
+      <label for="1"> Creo en:</label>
+      <input type="textarea" name="1" placeholder="" size="60" />
+    </div>
+  
+    <div class="qs">
+      <label for="2">Por eso actúo así:</label>
+      <input type="textarea" name="2" placeholder="" size="60" />
+    </div>
+
+    <div class="qs">
+        <label for="1"> Creo en:</label>
+        <input type="textarea" name="1" placeholder="" size="60" />
+      </div>
+    
+      <div class="qs">
+        <label for="2">Por eso actúo así:</label>
+        <input type="textarea" name="2" placeholder="" size="60" />
+      </div>
+
+      <div class="qs">
+        <label for="1"> Creo en:</label>
+        <input type="textarea" name="1" placeholder="" size="60" />
+      </div>
+    
+      <div class="qs">
+        <label for="2">Por eso actúo así:</label>
+        <input type="textarea" name="2" placeholder="" size="60" />
+      </div>
+      <div class="qs">
+        <label for="1"> Creo en:</label>
+        <input type="textarea" name="1" placeholder="" size="60" />
+      </div>
+    
+      <div class="qs">
+        <label for="2">Por eso actúo así:</label>
+        <input type="textarea" name="2" placeholder="" size="60" />
+      </div>
+      <div class="qs">
+        <label for="1"> Creo en:</label>
+        <input type="textarea" name="1" placeholder="" size="60" />
+      </div>
+    
+      <div class="qs">
+        <label for="2">Por eso actúo así:</label>
+        <input type="textarea" name="2" placeholder="" size="60" />
+      </div>
+      <div style="height: 40px;"></div>
+
+  
+    
+  
+    <button
+      class="btn btn-dark"
+      id="btn-guardar"
+      onSubmit="{guardar(e)}"
+      style="z-index: 3"
+    >
+      Guardar
+    </button>
+  </form>
+
+{% endblock content1 %} {% block content2 %}
+
+<img src="{% static 'img/aire/13.png' %}" class="imgcentral-d" />
+
+<style>
+    article{
+        color: rgb(120, 33, 120);
+        padding: 0%;
+        font-size: larger;
+        font-weight: 800;
+        z-index: 5;
+        padding-top: 0px;
+        margin-top: 0px;       ;
+    }
+</style>
+
+<article class="amatic2"> REFLEXIONA: <br> ¿ESTOY ACTUANDO DE ACUERDO A <br> MIS CREENCIAS</article>
+
+{% endblock content2 %}

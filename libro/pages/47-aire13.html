@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+
+
+<div style="margin-top: 0%;" >
+  <h4 class="cursiva-media" style="font-size: 40px; color: rgb(120, 33, 120)">
+    Aspectos por mejorar
+  </h4>
+  <div>
+   
+</div>
+
+  <form action="" style="display:flex; flex-direction:column; align-items:center " >
+    <p style="text-align: left">
+      Son desafíos que tenemos los seres humanos, de aspectos que deben pasar de un estado regular a uno superior. Ejemplo: Una persona asocial, debe mejorar la interacción con los demás. <br>
+      Una persona que desea que todo se dé rápidamente, debe mejorar la paciencia.
+    </p>
+ 
+      <p style="text-align: left;">
+        A continuación, relaciono los aspectos por mejorar que veo en mí:
+      </p>
+    
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+    
+      <p style="text-align: left">
+        Algunas personas (familiares, amigos, compañeros, no tan conocidos etc.) piensan que yo debería mejorar los siguientes aspectos (pregúntales y responde): Hazlo de la misma forma como hiciste el ejercicio anterior.
+      </p>
+    
+    <div style="color: rgb(231, 29, 136);" >FAMILIARES:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+ 
+
+    
+  </form>
+  
+  
+</div>
+
+{% endblock content1 %} {% block content2 %}
+
+<div style="margin-top: 0%; width:90%"  >
+  
+
+  <form action="" style="display:flex; flex-direction:column; align-items:center;  " >
+
+ 
+    <div style="color: rgb(181, 29, 231);" >COMPAÑEROS DE TRABAJO:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+    <div style="color: rgb(113, 29, 231);">AMIGOS:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+    <div style="color: rgb(66, 29, 231);" >PERSONAS NO TAN CONOCIDAS:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+
+    
+        <p style="text-align: left">
+          Después de ver mis aspectos por mejorar y compararlos con lo que perciben de mí; la familia, amigos, compañeros de trabajo y personas no tan conocidas reflexiono sobre cómo debo mejorarlos. Los enumero comenzando por lo que considero que debo trabajar más en mí:
+        </p>
+  
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+
+    <button class="btn btn-dark" id="btn-guardar" onSubmit="{guardar(e)}" style="z-index: 3; margin:10px ">  Guardar </button>
+  </form>
+  
+  
+</div>
+
+{% endblock content2 %}

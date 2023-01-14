@@ -24,89 +24,76 @@ font-family: 'Square Peg', cursive;
   --input-focus-h: 245;
   --input-focus-s: 100%;
   --input-focus-l: 42%;
-  
 }
 
-
-#videofoto{
+#videofoto {
   width: 50%;
   height: auto;
   z-index: 5;
   position: absolute;
 }
-p{
+p {
   font-size: 1rem;
 }
-.qs{
-  font-family: 'arial';
+.qs {
+  font-family: "arial";
   font-size: 1rem;
-  z-index: 2;
+  z-index: 5;
   padding: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: baseline;
+  justify-content: space-between;
   align-items: flex-end;
-
 }
-input{
+input {
   z-index: 3;
-  
-  
-  }
-.main-container{ 
+}
+.main-container {
   display: flex;
   flex-direction: column;
   place-content: center;
-
-
 }
-.spani{
+.spani {
   display: flex;
   flex-direction: row;
-  
 }
 
-#color{
+#color {
   position: absolute;
   margin-top: 5px;
-
 }
 
-
-#preguntascont{
-  width:80%
+#preguntascont {
+  width: 80%;
 }
-.question{
-  margin-bottom:10px;
+.question {
+  margin-bottom: 10px;
 }
-output{
-  padding-left:10px;
+output {
+  padding-left: 10px;
 }
-div.form-label{
-  width:90%
+div.form-label {
+  width: 90%;
 }
-.range1{
-  display:flex;
-  flex-direction:row;
-  align-content:space-between;
+.range1 {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
   width: 490px;
 }
 
-
-
 .next {
   width: 20px;
-  padding:0%;
-  margin:0%;
+  padding: 0%;
+  margin: 0%;
   display: flex;
-  scale:.1;
+  scale: 0.1;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
-  color:#56595a;
+  color: #56595a;
 
-  
   flex-direction: column;
 }
 
@@ -143,12 +130,12 @@ section .recuadro {
 
 .portrait {
   margin: 0px;
-  height: 800px
+  height: 800px;
 }
-.full-image{
+.full-image {
   position: relative;
 }
-.input-name{
+.input-name {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -157,7 +144,11 @@ section .recuadro {
   margin-left: 5%;
 }
 
-.fotos{
+textarea{
+  background-color: #f0eaf0;
+}
+
+.fotos {
   position: absolute;
   z-index: 5;
 }
@@ -175,11 +166,10 @@ p {
 .amatic2 {
   font-family: "Amatic SC";
   width: 100%;
-  
+
   padding-top: 20%;
   text-align: center;
   font-size: 40px;
- 
 }
 .amatic {
   font-family: "Amatic SC", cursive;
@@ -205,7 +195,6 @@ p {
   flex-direction: row;
   justify-content: center;
   margin-top: 0px;
-
 }
 .cursiva-grande {
   text-align: center;
@@ -216,14 +205,12 @@ p {
   text-align: center;
   font-family: "Square peg", cursive;
   font-size: 50px;
-  
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  
-  
+
   height: 800px;
   width: 90%;
   font-family: "PT Sans", sans-serif;
@@ -234,12 +221,11 @@ p {
 .content2 {
   width: 50%;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   -webkit-box-shadow: 4px 3px 5px 4px rgba(150, 150, 150, 1);
   -moz-box-shadow: 4px 3px 5px 4px rgba(150, 150, 150, 1);
   box-shadow: 4px 3px 5px 4px rgba(150, 150, 150, 1);
-
 }
 
 .center {
@@ -262,7 +248,7 @@ p {
 .content1 {
   display: flex;
   margin-right: 0px;
-  
+
   padding-left: 3%;
   background: rgb(255, 255, 231);
   background: linear-gradient(
@@ -288,17 +274,15 @@ p {
 }
 
 .imgcentral-d {
-
   position: absolute;
   opacity: 80%;
   z-index: 0;
-  scale:0.9;
+  scale: 0.9;
   margin-left: -50px;
   width: 46%;
-  }
-  
-.imgcentral-i {
+}
 
+.imgcentral-i {
   position: absolute;
   opacity: 80%;
   z-index: 0;
@@ -333,9 +317,6 @@ ol {
   border-radius: 50%;
 }
 
-
-
-
 @media only screen and (max-width: 767px) {
   .portrait {
     margin: 0px;
@@ -354,7 +335,6 @@ ol {
     padding-top: 20%;
     text-align: center;
     font-size: 2 10px;
-    
   }
   .siguiente .anterior {
     position: absolute;
@@ -375,6 +355,13 @@ ol {
     text-align: center;
     font-family: "Square peg", cursive;
     font-size: 50px;
+  }
+  .cursiva02 {
+    font-family: "Square peg", cursive;
+    margin: 0;
+    padding: 0;
+    
+    font-size: 30px;
   }
   .content {
     display: flex;

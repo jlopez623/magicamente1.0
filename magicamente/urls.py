@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from libro.views import agradecimientos,  cargarHtml, magia2, parametros,  portada, shortcut, personaImportante, signout, signin, crearTask
 from libro.views import prologo1, prologo2, introduccion, introduccion2, magia1, magia2, magia3, fomr1, magia4
-from libro.views import agua01, agua02, agua03, usuario,  crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas, grafica1, tabla, grafica2, actuar1, quiensoy1, quiensoy2, aguaport, agua001, agua002, tierra001, tierra002, tierra003, tierra004, tierra005, tierra006, tierra007, tierra008, tierra009, tierra010, tierra011
+from libro.views import agua01, agua02, agua03, usuario,  crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas, grafica1, tabla, grafica2, actuar1, quiensoy1, quiensoy2, aguaport, agua001, agua002, tierra001, tierra002, tierra003, tierra004, tierra005, tierra006, tierra007, tierra008, tierra009, tierra010, tierra011, aire01, aire02, aire03, aire04, aire05, aire06, aire07, aire08, aire09, aire10, aire11, aire12, aire13, aire14, aire15, fuego01, fuego02, fuego03, fuego04, portada0, fuego05
 
 
 urlpatterns = [
@@ -41,6 +41,7 @@ urlpatterns = [
     path('home/', home),
     path('dashboard/', dashboard, name='dashboard'),
     path('portada1/', portada, name="portada"),
+    path('portada0/', portada0, name="portada0"),
     path('parametros/', parametros),
     path('cargador/', cargarHtml),
     path('shortcut/', shortcut),
@@ -78,6 +79,28 @@ urlpatterns = [
     path('tierra009/', tierra009, name='tierra009'),
     path('tierra010/', tierra010, name='tierra010'),
     path('tierra011/', tierra011, name='tierra011'),
+    path('aire01/', aire01, name='aire01'),
+    path('aire02/', aire02, name='aire02'),
+    path('aire03/', aire03, name='aire03'),
+    path('aire04/', aire04, name='aire04'),
+    path('aire05/', aire05, name='aire05'),
+    path('aire06/', aire06, name='aire06'),
+    path('aire07/', aire07, name='aire07'),
+    path('aire08/', aire08, name='aire08'),
+    path('aire09/', aire09, name='aire09'),
+    path('aire10/', aire10, name='aire10'),
+    path('aire11/', aire11, name='aire11'),
+    path('aire12/', aire12, name='aire12'),
+    path('aire13/', aire13, name='aire13'),
+    path('aire14/', aire14, name='aire14'),
+    path('aire15/', aire15, name='aire15'),
+    path('fuego01/', fuego01, name='fuego01'),
+    path('fuego02/', fuego02, name='fuego02'),
+    path('fuego03/', fuego03, name='fuego03'),
+    path('fuego04/', fuego04, name='fuego04'),
+    path('fuego05/', fuego05, name='fuego05'),
+    
+    
     path('form1/', fomr1),
     path('form1/user/', usuario)
 

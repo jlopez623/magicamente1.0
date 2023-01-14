@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<img src="{% static 'img/aire/06.png' %}" class="imgcentral-i" />
+
+<div style="padding-top: 250px; padding-left:80px; color:black; z-index: index 5;">
+  
+  <article style="z-index: index 5;">
+    Son los pensamientos y sentimientos que forman parte de tu realidad, surgen de la <br> educación en tu infancia y de personas que ejercieron autoridad en ti, como: padres, <br> profesores, hermanos, personajes admirados, amigos, etc. y de experiencias vividas.
+    <br> <br> <br>
+      Las creencias tienen el poder de crear y el poder de destruir. “Tanto si crees que <br>
+       puedes, como si crees que no puedes, estás en lo cierto”, decía Henry Ford
+       <br> <br>
+  </article>
+    
+</div>
+
+<h3 class="cursiva-media" style="font-weight: 600; font-size: 36px; z-index: 5; color:rgb(99, 17, 206)">
+  Actúas y ves el mundo de acuerdo con tus creencias. 
+</h3>
+
+<span>EL MUNDO ES COMO TU LO VES</span>
+
+<P>
+  <br> 
+  Escribe tus creencias relacionadas con algunos temas específicos.
+<br>
+De manera rápida y sin racionalizar demasiado, responde qué significado  tienen para ti las siguientes palabras:
+
+</P>
+
+{% endblock content1 %} {% block content2 %}
+<img src="{% static 'img/aire/07.png' %}" class="imgcentral-d" style="z-index:0 ;"/>
+
+
+<form action="" style="z-index: 5;">
+  <div class="qs">
+    <label for="1"> Espiritualidad:</label>
+    <input type="textarea" name="1" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="2">Familia:</label>
+    <input type="textarea" name="2" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="3">Salud: </label>
+    <input type="textarea" name="3" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="4"> Dinero</label>
+    <input type="textarea" name="4" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="5"> Amigos</label>
+    <input type="textarea" name="5" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="6"> Felicidad:</label>
+    <input type="textarea" name="6" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="7"> Educación:</label>
+    <input type="textarea" name="7" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="8"> Pareja:</label>
+    <input type="textarea" name="8" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="9"> Trabajo:</label>
+    <input type="textarea" name="9" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="10"> Ecología:</label>
+    <input type="textarea" name="10" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="11"> Actividad física:</label>
+    <input type="textarea" name="11" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="12"> Lúdica:</label>
+    <input type="textarea" name="12" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="13"> Amor:</label>
+    <input type="textarea" name="13" placeholder="" size="60" />
+  </div>
+
+  <div class="qs">
+    <label for="14"> Otras creencias:</label>
+    <input type="textarea" name="14" placeholder="" size="60" />
+  </div>
+
+  
+
+  <button
+    class="btn btn-dark"
+    id="btn-guardar"
+    onSubmit="{guardar(e)}"
+    style="z-index: 3"
+  >
+    Guardar
+  </button>
+</form>
+
+
+{% endblock content2 %}

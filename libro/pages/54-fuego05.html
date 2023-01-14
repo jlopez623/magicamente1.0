@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}{% load static %} 
+
+
+
+ {% block content1 %}
+
+ <img
+  src="{% static 'img/fuego/07.png' %}"
+  class="imgcentral-i"
+  style="opacity: 50%;"
+/>
+
+<div style="width: 85%">
+  <h3 style="text-align: center;">Área</h3>
+  <h1 class="cursiva-media"> Espiritual</h2>
+
+    <p>La espiritualidad tiene que ver con el mejoramiento del ser y va en relación con tu fe.</p>
+<p>¿De qué manera puedes crecer en tu interior? </p>
+<p>Ejemplo: A partir de hoy (día, mes y año) voy a dejar de quejarme, esto lo logro en tres meses.</p>
+
+<p>Para acercarte día a día a esta meta y hacerla consciente, pondrás en el espejo de tu baño un letrero de color amarillo que diga: “Yo soy una persona muy positiva”, al final de cada día anotas en una libreta destinada para tus propósitos, cómo lo hiciste, revisas si fuiste positivo, o si te quejaste mucho durante el día y lo escribes.</p>
+
+<p>A continuación, piensa y anota cuáles son tus metas y acciones. Estas pueden ser a corto plazo (0 a 3 meses), a mediano plazo (de 4 a 12 meses) o a largo plazo (de 1 año en adelante).</p>
+
+
+  
+</div>
+
+{% endblock content1 %} {% block content2 %}
+
+<img
+src="{% static 'img/fuego/07.png' %}"
+class="imgcentral-i"
+style="opacity: 50%;"
+/>
+<div>
+<textarea name="descripcion_meta" id="1" cols="30" rows="10"></textarea>
+<label for="pet-select">Choose a pet:</label>
+
+<select name="esperiodico" id="esPeriodico">
+    <option value="">si</option>
+    <option value="dog">no</option>
+  
+</select>
+
+<select name="esperiodico" id="esPeriodico">
+  <option value="">si</option>
+  <option value="dog">no</option>
+
+</select>
+
+
+
+</div>
+
+{% endblock content2 %}

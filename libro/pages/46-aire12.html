@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<img src="{% static 'img/aire/15.png' %}" class="imgcentral-i" />
+
+<div style="z-index: 5; margin-left:15%">
+  <p style="text-align: center">
+    Algunas personas (familiares, amigos, compañeros de trabajo, <br />
+    inclusive es interesante preguntarle a personas que no sean <br />
+    tan conocidas para mirar cómo me perciben a primera vista etc.) <br />
+    piensan que mis mayores cualidades son: (pregúntales y escribe en la
+    siguiente página)
+    <br />
+    Pon sobres y pequeñas hojas al alcance de las personas de las que <br />
+    quieres su opinión. Solicítales que te las escriban y que te <br />
+    las entreguen en un sobre.
+
+    <br />
+  </p>
+</div>
+
+{% endblock content1 %} {% block content2 %}
+
+<div style="margin-top: 0%; "  >
+  <h4 class="cursiva-media" style="font-size: 40px; color: rgb(120, 33, 120)">
+    Mis fortalezas
+  </h4>
+
+  <form action="" style="display:flex; flex-direction:column; align-items:center " >
+
+    <div style="color: rgb(231, 29, 136);" >FAMILIARES:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+    <div style="color: rgb(181, 29, 231);" >COMPAÑEROS DE TRABAJO:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+    <div style="color: rgb(113, 29, 231);">AMIGOS:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+    <div style="color: rgb(66, 29, 231);" >PERSONAS NO TAN CONOCIDAS:</div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+
+    <div style="margin-left:15%">
+        <p style="text-align: center">
+            Después de ver tus valores y compararlos con lo que perciben de ti la familia, los amigos, los compañeros de trabajo, las personas no tan conocidas, enumera los que consideras más relevantes:
+        </p>
+    </div>
+    <textarea name="familiares" id="familiares" cols="50" rows="3" ></textarea>
+
+    <button class="btn btn-dark" id="btn-guardar" onSubmit="{guardar(e)}" style="z-index: 3; margin:10px ">  Guardar </button>
+  </form>
+  
+  
+</div>
+
+{% endblock content2 %}

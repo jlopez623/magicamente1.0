@@ -20,12 +20,17 @@ class Usuario (models.Model):
     movil = models.CharField(max_length=10, verbose_name='Teléfono',null=True)
     birth = models.DateField(verbose_name="fecha de nacimiento",null=True)
     password = models.CharField(max_length=50, verbose_name='contraseña')
-     
+    
     
     def __str__(self):
         return self.first_name
         
-    
+"""class Profiles_photo(models.Model):
+    Photo = models.ImageField(verbose_name='photo', null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.user"""
+ 
 class Task(models.Model):
     title =  models.CharField(max_length=100)
     descripción = models.TextField(blank=True)

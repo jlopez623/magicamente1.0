@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<span class="cursiva-media" style="font-size: 40px; color:rgb(120, 33, 120)">
+  ¿Cómo cambiar tus creencias limitantes?</span>
+
+
+<div>
+  <p style="text-align: center;">
+    <br> <br>
+    Determinar esas creencias limitantes es un paso importante para tu crecimiento. A continuación, te sugerimos que, con base en cada creencia elegida, respondas las siguientes preguntas.
+    <br>
+  </p>
+</div>
+
+
+
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Desde cuándo he tenido esta creencia? ¿La adquirí de mis padres, de mis maestros, del ambiente, de mis lecturas o de quiénes?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="4" style="background-color: rgb(240, 217, 246);"></textarea>
+</div>
+
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Qué experiencias he tenido con estas creencias, que además la ratifiquen? ¿O a veces las encuentro erróneas? ¿Qué he aprendido o reflexionado acerca de esto?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="4" style="background-color: rgb(240, 217, 246)" ></textarea>
+</div>
+
+
+
+
+
+{% endblock content1 %} {% block content2 %}
+
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Qué tan distinta sería mi vida si no tuviera yo esa creencia?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="5" style="background-color: rgb(240, 217, 246)"  ></textarea>
+</div>
+<div class="pregunta">
+  <p style="text-align: center;">
+    <br> <br>
+    ¿Si creyera lo contrario que haría yo, cómo actuaría?
+    <br>
+  </p>
+  <textarea name="1" id="1" cols="80" rows="5" style="background-color: rgb(240, 217, 246)"  ></textarea>
+</div>
+
+
+<button class="btn btn-dark" id="btn-guardar" onSubmit="{guardar(e)}" style="z-index: 3; margin:10px ">  Guardar </button>
+
+
+{% endblock content2 %}

@@ -38,6 +38,7 @@ LOGOUT_REDIRECT_URL='/'
 # Application definition
 
 INSTALLED_APPS = [
+    
     'django.contrib.admin',
     'libro',
     'django.contrib.auth',

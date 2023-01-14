@@ -1,106 +1,111 @@
-{% extends 'layout.html' %} {%block title %} {% endblock %} {% load static %} {% block content1 %}
+{% extends 'layout.html' %} {% block title %} {% endblock %} {% load static %}
+{% block content1 %}
 <!--<script src='{% static "js\camera.js" %}'></script>-->
-<img src='{% static "img/camara.png" %}' class="portrait" width="80%"> 
+<img
+  src='{% static "img/camara.png" %}'
+  class="portrait"
+  width="80%"
+  style="z-index: 5"
+/>
 <div class="camara-main">
-    <div class="camara">
-        <video id="theVideo" autoplay></video>
-        <canvas id="theCanvas"></canvas>
-    
-        <button id="btnCapture" class="btn btn-primary">Tomar Foto</button>
-        <button id="btnDownloadImage" class="btn btn-secondary">Guardar</button>
-    </div>
+  <div class="camara" style="position: relative">
+    <video id="theVideo" autoplay class="lvideo"></video>
+    <canvas id="theCanvas"></canvas>
+  </div>
 </div>
+<button id="btnCapture" class="btn btn-primary">Tomar Foto</button>
+<button id="btnDownloadImage" class="btn btn-secondary">Guardar</button>
 <script type="text/javascript">
-    var videoWidth = 320;
-    var videoHeight = 240;
-    var videoTag = document.getElementById('theVideo');
-   
+  let videoWidth = 320;
+  let videoHeight = 240;
+  let videoTag = document.getElementById("theVideo");
 
-    var canvasTag = document.getElementById('theCanvas');
-    var btnCapture = document.getElementById("btnCapture");
-    var btnDownloadImage = document.getElementById("btnDownloadImage");
-    videoTag.setAttribute('width', videoWidth);
-    videoTag.setAttribute('height', videoHeight);
-    
-    canvasTag.setAttribute('width', videoWidth);
-    canvasTag.setAttribute('height', videoHeight);
-    window.onload = () => {
-        navigator.mediaDevices.getUserMedia({
-            audio: false,
-            video: {
-                width: videoWidth,
-                height: videoHeight
-            }
-        }).then(stream => {
-            videoTag.srcObject = stream;
-        }).catch(e => {
-            document.getElementById('errorTxt').innerHTML = 'ERROR: ' + e.toString();
-        });
-        var canvasContext = canvasTag.getContext('2d');
-        btnCapture.addEventListener("click", () => {
-            let video = document.getElementById('theVideo');
-            video.remove();
-                                 
-            canvasContext.drawImage(videoTag, 0, 0, videoWidth, videoHeight);
+  let canvasTag = document.getElementById("theCanvas");
+  let btnCapture = document.getElementById("btnCapture");
+  let btnDownloadImage = document.getElementById("btnDownloadImage");
+  videoTag.setAttribute("width", videoWidth);
+  videoTag.setAttribute("height", videoHeight);
 
-        });
-        btnDownloadImage.addEventListener("click", () => {
-            var link = document.createElement('a');
-            link.download = 'capturedImage.png';
-            link.href = canvasTag.toDataURL();
-            link.click();
-        });
-    };
+  canvasTag.setAttribute("width", videoWidth);
+  canvasTag.setAttribute("height", videoHeight);
+  window.onload = () => {
+    navigator.mediaDevices
+      .getUserMedia({
+        audio: false,
+        video: {
+          width: videoWidth,
+          height: videoHeight,
+        },
+      })
+      .then((stream) => {
+        videoTag.srcObject = stream;
+      })
+      .catch((e) => {
+        document.getElementById("errorTxt").innerHTML =
+          "ERROR: " + e.toString();
+      });
+    let canvasContext = canvasTag.getContext("2d");
+    btnCapture.addEventListener("click", () => {
+      let video = document.getElementById("theVideo");
+      video.remove();
+
+      canvasContext.drawImage(videoTag, 0, 0, videoWidth, videoHeight);
+    });
+    btnDownloadImage.addEventListener("click", () => {
+      let link = document.createElement("a");
+      link.download = "capturedImage.png";
+      link.href = canvasTag.toDataURL();
+      link.click();
+    });
+  };
 </script>
-    <style>
-        .camara-main {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-           
-            /*background-image: url('{% static "img/camara.png" %}');*/
-            padding:10px;
-            
-            
-        }
-        .camara {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            /*background-image: url('{% static "img/camara.png" %}');*/
-            padding:10px;
-            
-            
-        }
-        
-        #btn-capture  {
-            margin-left: 45%;
-            margin-top: 20px;
-        }
-        
-        .ideo {
-            position: absolute;
-            
-            border-radius: 20%;
-            margin-left: 15%;
-            margin-top: 60%;
-            z-index: 0;
-            
-        }
-    </style>
+<style>
+  .camara-main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    /*background-image: url('{% static "img/camara.png" %}');*/
+    padding: 10px;
+  }
+  .camara {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    /*background-image: url('{% static "img/camara.png" %}');*/
+    padding: 10px;
+  }
 
+  #btn-capture {
+    margin-left: 45%;
+    margin-top: 20px;
+  }
+
+  .lvideo {
+    position: absolute;
+    width: 75%;
+
+    border-radius: 20%;
+    margin-left: 20%;
+    margin-top: 40%;
+    z-index: 0;
+    margin-bottom: 5%;
+  }
+</style>
 
 {% endblock %} {% block content2 %}
 
-<img src='{% static "img/el_libro/el-libro.png" %}' class="full-image" width="80%"> 
-<div class="input-name">
-    <input type="text" name="nombre" placeholder="Yo soy" autofocus>
-    <button class="btn bg-secondary" >Guardar</button>
-</div>
+<img
+  src='{% static "img/el_libro/el-libro.png" %}'
+  class="full-image"
+  width="80%"
+/>
+<form action="" class="input-name" style="margin-bottom: 2%;" >
+  <input type="text" name="nombre" placeholder="Yo soy" autofocus />
+  <button class="btn bg-secondary" >Guardar</button>
+</form>
 {% endblock %}

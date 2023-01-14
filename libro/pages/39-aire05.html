@@ -1,0 +1,106 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<img src="{% static 'img/aire/08.png' %}" class="imgcentral-i" />
+
+<div style="height: 100px"></div>
+
+<h3
+  class="amatic2"
+  style="font-weight: 600; font-size: 36px; z-index: 5; color: white"
+>
+  Clasifica ahora en este cuadro tus <br />
+  creencias, identificadas en el ejercicio <br />
+  anterior, relacionadas con los <br />
+  aspectos enumerados de tu vida, <br />
+  escribiendo a la izquierda las que <br />
+  tienen mayor prioridad, en el centro <br />
+  las que tienen prioridad media y por <br />
+  último las demás.
+</h3>
+
+{% endblock content1 %} {% block content2 %}
+
+<div>
+
+  <form action="">
+    <style>
+      .titulo{
+        
+        color:white; width: 40%; font-size:large;
+        text-align: center;
+        font-weight: 6 00;
+        padding-bottom: 10px;
+
+      }
+      .rows{
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between
+      }
+      textarea{
+        text-align: center;
+        color: white
+      }
+    </style>
+    <div class="rows">
+      <span class="titulo" style="background-color: rgb(227,153,228 )"; >Prioridad Alta</span>
+      <span style="background-color: rgb(193, 83, 195); " class="titulo">Prioridad Media</span>
+      <span style="background-color: rgb(150, 64, 207); " class="titulo">Prioridad Baja </span>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content:space-between">
+      <textarea name="1a" id="1a" cols="25" rows="2" style="background-color: rgb(227, 153, 228);" ></textarea>
+      <textarea name="1a" id="1m" cols="25" rows="2" style="background-color: rgb(193, 83, 195);" ></textarea>
+      <textarea name="1a" id="1b" cols="25" rows="2" style="background-color: rgb(150, 64, 207);" ></textarea>
+    </div>
+
+
+
+
+
+    <div style="justify-content: center; width:100%">
+      <button   class="btn btn-dark" id="btn-guardar" onSubmit="{guardar(e)}" style="z-index: 3">  Guardar </button>
+    </div>
+
+  </form>
+
+</div>
+
+
+
+
+{% endblock content2 %}

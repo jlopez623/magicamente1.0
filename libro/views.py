@@ -156,6 +156,15 @@ def delete(request, task_id):
         task.delete()
         return redirect('tareas')
 
+
+
+def portada0(request):
+    
+    anterior= '/dashboard/'
+    siguiente = '/portada1/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '001-portada.html', context )
+
 def portada(request):
     
     anterior= '/dashboard/'
@@ -293,6 +302,7 @@ def agua03(request):
     anterior= '/agua02/'
     siguiente = '/grafica1'
     context = {"anterior": anterior, "siguiente": siguiente}
+    
 
     return render(request, '16-agua03.html', context)
 
@@ -374,7 +384,7 @@ def agua002(request):
 
 @login_required
 def tierra001(request):
-    anterior= '/agua003/'
+    anterior= '/agua002/'
     siguiente = '/tierra002/'
     context = {"anterior": anterior, "siguiente": siguiente}
     
@@ -405,7 +415,7 @@ def tierra004(request):
     return render(request, '27-tierra004.html',context)
 @login_required
 def tierra005(request):
-    anterior= '/tierra003/'
+    anterior= '/tierra004/'
     siguiente = '/tierra006/'
     context = {"anterior": anterior, "siguiente": siguiente}
     
@@ -454,16 +464,182 @@ def tierra010(request):
 @login_required
 def tierra011(request):
     anterior= '/tierra010/'
-    siguiente = '/tierra012/'
+    siguiente = '/aire01/'
     context = {"anterior": anterior, "siguiente": siguiente}
     
     return render(request, '34-tierra011.html',context)
+
+@login_required
+def aire01(request):
+    anterior= '/tierra011/'
+    siguiente = '/aire02/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '35-aire01.html',context)
+
+@login_required
+def aire02(request):
+    anterior= '/aire01/'
+    siguiente = '/aire03/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '36-aire02.html',context)
+
+@login_required
+def aire03(request):
+    anterior= '/aire02/'
+    siguiente = '/aire04/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+    return render(request, '37-aire03.html',context)
+
+@login_required
+def aire04(request):
+    anterior= '/aire03/'
+    siguiente = '/aire05/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+
+    return render(request, '38-aire04.html', context)
+
+@login_required
+def aire05(request):
+    anterior= '/aire03/'
+    siguiente = '/aire06/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    
+
+    return render(request, '39-aire05.html', context)
+
+@login_required
+def aire06(request):
+    anterior= '/aire05/'
+    siguiente = '/aire07/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '40-aire06.html', context)
+
+
+@login_required
+def aire07(request):
+    anterior= '/aire06/'
+    siguiente = '/aire08/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '41-aire07.html', context)
+
+@login_required
+def aire08(request):
+    anterior= '/aire07/'
+    siguiente = '/aire09/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '42-aire08.html', context)
+
+@login_required
+def aire09(request):
+    anterior= '/aire08/'
+    siguiente = '/aire10/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '43-aire09.html', context)
+
+
+@login_required
+def aire10(request):
+    anterior= '/aire09/'
+    siguiente = '/aire11/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '44-aire10.html', context)
+
+@login_required
+def aire11(request):
+    anterior= '/aire10/'
+    siguiente = '/aire12/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '45-aire11.html', context)
+
+@login_required
+def aire12(request):
+    anterior= '/aire11/'
+    siguiente = '/aire13/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '46-aire12.html', context)
+
+@login_required
+def aire13(request):
+    anterior= '/aire12/'
+    siguiente = '/aire14/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '47-aire13.html', context)
+
+@login_required
+def aire14(request):
+    anterior= '/aire13/'
+    siguiente = '/aire15/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '48-aire14.html', context)
+
+@login_required
+def aire15(request):
+    anterior= '/aire14/'
+    siguiente = '/fuego01/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '49-aire15.html', context)
+
+@login_required
+def fuego01(request):
+    anterior= '/aire15/'
+    siguiente = '/fuego02/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '50-fuego01.html', context)
+
+@login_required
+def fuego02(request):
+    anterior= '/fuego01/'
+    siguiente = '/fuego03/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '51-fuego02.html', context)
+
+@login_required
+def fuego03(request):
+    anterior= '/fuego02/'
+    siguiente = '/fuego04/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '52-fuego03.html', context)
+
+
+@login_required
+def fuego04(request):
+    anterior= '/fuego03/'
+    siguiente = '/fuego05/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '53-fuego04.html', context)
+
+@login_required
+def fuego05(request):
+    anterior= '/fuego04/'
+    siguiente = '/fuego06/'
+    context = {"anterior": anterior, "siguiente": siguiente}
+    return render(request, '54-fuego05.html', context)
+
+
+
+
+
+
+
+
+
 
 
 def usuario1(request):
     print("hola")
     mensaje = "hola %r" % request.GET["nombre"]
     return HttpResponse(mensaje)
+
+
+
+
+
+
+
 
 
 def usuario(request):

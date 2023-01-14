@@ -16,7 +16,7 @@ static %} {% block content1 %}
   <option value="90">90</option>
   <option value="100">100</option>
 </datalist>
-<form id="preguntascont" style="height: 700px; overflow: auto">
+<form id="preguntascont" style="height: 700px; overflow: auto" method="POST">
   <!--generado por script-->
   <script type="text/javascript">
     const lista1 = [
@@ -212,7 +212,7 @@ static %} {% block content1 %}
           listapruebas[48] +
           listapruebas[55] +
           listapruebas[59];
-        dataUser.push(espiritual);
+        dataUser.push(parseInt(espiritual));
   
         //suma3+6+9+14+16+29+32+48
         var fisica =
@@ -224,7 +224,7 @@ static %} {% block content1 %}
           listapruebas[28] +
           listapruebas[31] +
           listapruebas[47];
-        dataUser.push(fisica);
+        dataUser.push(parseInt(fisica));
   
         //suma 2+5+19+21+25+35+37+40
         var mental =
@@ -236,7 +236,7 @@ static %} {% block content1 %}
           listapruebas[34] +
           listapruebas[36] +
           listapruebas[39];
-        dataUser.push(mental);
+        dataUser.push(parseInt(mental));
   
         //suma: 23+41+43+50+59+61+65+67
         var emocional =
@@ -248,7 +248,7 @@ static %} {% block content1 %}
           listapruebas[60] +
           listapruebas[64] +
           listapruebas[66];
-        dataUser.push(emocional);
+        dataUser.push(parseInt(emocional));
   
         //suma: 1+11+47+52+55+58+62+68
         var ludica =
@@ -260,7 +260,7 @@ static %} {% block content1 %}
           listapruebas[57] +
           listapruebas[61] +
           listapruebas[67];
-        dataUser.push(ludica);
+        dataUser.push(parseInt(ludica));
   
         //suma 12+18+22+53+63+64+69+70
         var familiar =
@@ -272,7 +272,7 @@ static %} {% block content1 %}
           listapruebas[63] +
           listapruebas[68] +
           listapruebas[69];
-        dataUser.push(familiar);
+        dataUser.push(parseInt(familiar));
   
         //suma 10+13+42+45+54+57+73+75
         var social =
@@ -284,7 +284,7 @@ static %} {% block content1 %}
           listapruebas[59] +
           listapruebas[72] +
           listapruebas[74];
-        dataUser.push(social);
+        dataUser.push(parseInt(social));
   
         //suma 7+8+15+24+26+36+38+44
         var economica =
@@ -296,7 +296,7 @@ static %} {% block content1 %}
           listapruebas[35] +
           listapruebas[37] +
           listapruebas[43];
-        dataUser.push(economica);
+        dataUser.push(parseInt(economica));
   
         //suma 31+34+74++76+77+78+79+80
         var ecologica =
@@ -308,7 +308,7 @@ static %} {% block content1 %}
           listapruebas[77] +
           listapruebas[78] +
           listapruebas[79];
-        dataUser.push(ecologica);
+        dataUser.push(parseInt(ecologica));
   
         //suma 20+27+28+46+51+66+71+72
         var laboral =
@@ -320,7 +320,8 @@ static %} {% block content1 %}
           listapruebas[65] +
           listapruebas[70] +
           listapruebas[71];
-        dataUser.push(laboral);
+        dataUser.push(parseInt(laboral));
+       
   
         return dataUser;
       }

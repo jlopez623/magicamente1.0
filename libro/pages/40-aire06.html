@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}{% load static %} {% block content1 %}
+
+<img src="{% static 'img/aire/09.png' %}" class="imgcentral-i" />
+
+<h3
+  class="amatic2"
+  style="
+    font-weight: 600;
+    font-size: 36px;
+    z-index: 5;
+    color: rgb(155, 65, 203);
+    padding-top: 0px;
+  "
+>
+  El cuadro anterior refleja tus <br />
+  creencias y prioridades. <br />
+  Las creencias guían tu <br />
+  comportamiento y dan sentido a tus <br />
+  acciones.
+</h3>
+
+{% endblock content1 %} {% block content2 %}
+
+<img src="{% static 'img/aire/10.png' %}" class="imgcentral-d" />
+
+<div style="margin-left: 10%; z-index: 5">
+  <div style="z-index: 5">
+    <div class="cursiva-media" style="font-size: 40px">
+      !También existen las creencias que nos limitan!
+    </div>
+    <div style="margin-left: 20%;">
+      <div><p>Ejemplo de algunas creencias limitantes: <br></p></div>
+
+      <div><i> - Yo no puedo, no soy capaz </i></div>
+      <div><i> - De eso tan bueno no dan tanto</i></div>
+      <div><i> - No nací para ser rico</i></div>
+      <div><i> - La vida es muy dura</i></div>
+      <div><i> - La plata está muy escasa</i></div>
+    </div>
+
+    <p style="text-align: center; width:90%">
+      <br />
+      <br />
+      Cuando te encuentras frente a una creencia limitante generalmente se te
+      dificulta expresar y <br />
+      aprovechar tu máximo potencial. Es importante que reflexiones y trates de
+      determinar: ¿cuáles son <br />
+      algunas de mis creencias limitantes? De este modo podrás describir y
+      asumir nuevas creencias que te permitan vivir en 
+      armonía con quien eres y con tu propósito.
+    </p>
+
+    <span>Escribe a continuación algunas de tus creencias limitantes: <br></span>
+  </div>
+
+  <textarea name="creenciastxt" id="creenciastxt" cols="80" rows="6" style="margin-top: 5%;"></textarea>
+</div>
+
+<button
+  class="btn btn-dark"
+  id="btn-guardar"
+  onSubmit="{guardar(e)}"
+  style="z-index: 3"
+>
+  Guardar
+</button>
+
+{% endblock content2 %}
