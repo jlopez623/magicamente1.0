@@ -1,10 +1,19 @@
 {% extends "layout.html" %} {% load static %} {%block title %} pagina 1 {% endblock %}  {% block content1 %} 
 
-
+{% csrf_token %}
 
     <img src="{% static '/img/p42.png' %}" alt="" class="imgcentral2" >
+    
+  <div>
+    
+    <span>prueba de datos:</span>
+    {% for field in cuestionario %}
 
+    <p> {{field}} </p>
 
+    {% endfor %}
+
+  </div>
 
 
 {% endblock %} 

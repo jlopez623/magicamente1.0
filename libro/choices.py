@@ -12,3 +12,8 @@ codigos_libro = [
     
 
 ]
+
+sexo=(
+    ('M', 'Masculino'),
+    ('F', 'Femenino')
+)

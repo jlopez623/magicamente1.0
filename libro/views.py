@@ -1,21 +1,18 @@
 from pipes import Template
 #from unicodedata import name
 from unittest import loader
-
-
-
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import datetime
 from django.template import Template, Context, loader
-from .forms import UserForm, TaskForm
+from .forms import UserForm, TaskForm, QuiensoyForm
 
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from .forms import TaskForm
-from .models import Task
+
+from .models import Task, Cuestionario, Quiensoy
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
@@ -77,7 +74,7 @@ def signin(request):
 
         if user is None:
 
-            return render(request, 'signn.html', {
+            return render(request, 'sign.html', {
                 'formlogin': AuthenticationForm,
                 'error': 'Usuario o contraseña incorrectos'
             })
@@ -255,7 +252,7 @@ def introduccion2(request):
     context = {"anterior": anterior, "siguiente": siguiente}  
     return render(request, '09-introduccion2.html', context)
 
-@login_required
+#@login_required
 def magia1(request):
     anterior= '/intro2/'
     siguiente = '/magia02/'
@@ -299,10 +296,16 @@ def agua02(request):
 
 @login_required
 def agua03(request):
+    
     anterior= '/agua02/'
     siguiente = '/grafica1'
-    context = {"anterior": anterior, "siguiente": siguiente}
     
+    if request.method == request.POST:
+        data = request.POST
+        print(data)
+        context = {"anterior": anterior, "siguiente": siguiente, 'data':data}
+    else:
+        context = {"anterior": anterior, "siguiente": siguiente}        
 
     return render(request, '16-agua03.html', context)
 
@@ -344,9 +347,19 @@ def actuar1(request):
 
 @login_required
 def quiensoy1(request):
+    form = QuiensoyForm(request.POST or None)
+    
+    
+    data= request.POST
     anterior= '/actuar1/'
     siguiente = '/quiensoy2/'
-    context = {"anterior": anterior, "siguiente": siguiente}
+    label=0
+    
+            
+
+            
+        
+    context = {"anterior": anterior, "siguiente": siguiente, 'form':form, 'label':label,}
     
     return render(request, '20-quien-soy1.html',context)
 
@@ -655,3 +668,11 @@ def crearUsuario(request):
     # data = UserForm.objects.all()
     formulario = UserForm(request.POST or None)
     return render(request, 'forms/registro.html', {'formulario': formulario})
+
+@login_required
+def tablaPrueba(request):
+    cuestionario= Cuestionario.objects.all()
+   
+    print(cuestionario)
+    """context= {'cuestionario':Cuestionario}"""
+    return render (request, 'tabla.html', {"cuestionario":cuestionario})

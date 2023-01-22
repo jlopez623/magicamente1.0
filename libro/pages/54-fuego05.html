@@ -10,10 +10,15 @@
   style="opacity: 50%;"
 />
 
-<div style="width: 85%">
+<div style="width: 85%; margin-top:0px; z-index:5;" >
   <h3 style="text-align: center;">Área</h3>
   <h1 class="cursiva-media"> Espiritual</h2>
-
+<style>
+  p{
+    text-align: center;
+    margin-left: 10%;
+  }
+</style>
     <p>La espiritualidad tiene que ver con el mejoramiento del ser y va en relación con tu fe.</p>
 <p>¿De qué manera puedes crecer en tu interior? </p>
 <p>Ejemplo: A partir de hoy (día, mes y año) voy a dejar de quejarme, esto lo logro en tres meses.</p>
@@ -33,24 +38,53 @@ src="{% static 'img/fuego/07.png' %}"
 class="imgcentral-i"
 style="opacity: 50%;"
 />
-<div>
-<textarea name="descripcion_meta" id="1" cols="30" rows="10"></textarea>
-<label for="pet-select">Choose a pet:</label>
+<div style="z-index:5; display:flex; flex-direction: row">
+<textarea name="descripcion_meta" id="1" cols="30" rows="10" placeholder="Escribe tu meta"></textarea>
 
-<select name="esperiodico" id="esPeriodico">
-    <option value="">si</option>
-    <option value="dog">no</option>
+  <div style="display:flex; flex-direction:column" id="optionsid">
+    <label for="esperiodico">¿Es una meta perioidica?:</label>
+    <select name="esperiodico" id="esPeriodico">
+        <option value="si">si</option>
+        <option value="no">no</option>
+
+    </select>
+   
   
-</select>
+  </div>
 
-<select name="esperiodico" id="esPeriodico">
-  <option value="">si</option>
-  <option value="dog">no</option>
-
-</select>
-
-
+  
 
 </div>
+
+<script>
+    let  periodico = document.getElementById('esPeriodico')
+    periodico.addEventListener('onChange', create())
+    
+    function create (){
+      
+      let options = document.getElementById('optionsid')
+      
+    if (periodico.value=="si"){
+      function setOption(campo){
+        option=document.createElement('option')
+       option.setAttribute('value', campo)
+       option.innerText(campo)
+       field.append(option)
+      }
+
+      label=document.createElement('label')
+      
+      field=document.createElement('select')
+      setOption('Diariamente')
+      setOption('Semanalmente')
+      setOption('Mensualmente')
+
+      field.setAttribute('option','diario')
+      options.append(field)
+    }
+    }
+    
+
+</script>
 
 {% endblock content2 %}

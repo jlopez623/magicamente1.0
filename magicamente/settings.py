@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 from telnetlib import LOGOUT
 
+from django.urls import reverse_lazy
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,8 +33,8 @@ ALLOWED_HOSTS = []
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
-LOGIN_REDIRECT_URL= '/'
-LOGOUT_REDIRECT_URL='/'
+LOGIN_REDIRECT_URL= reverse_lazy('dashboard')
+LOGOUT_REDIRECT_URL= reverse_lazy('login')
 
 
 # Application definition
@@ -152,3 +154,11 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/login'
+
+
+EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS= True
+EMAIL_PORT=587
+EMAIL_USER="magicamente2020@gmail.com"
+EMAIL_PASSWORD="chaloymary08"

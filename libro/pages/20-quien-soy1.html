@@ -1,4 +1,4 @@
-{% extends 'layout.html' %} {% load static %} {% block content1 %}
+{% extends 'layout.html' %} {% load static %}  {% block content1 %}
 
 <img src="{% static 'img/20/01.png' %}" class="imgcentral-i" />
 
@@ -10,9 +10,17 @@
         Contesta esta pregunta diez veces. Evita darle respuesta a esta pregunta
         diciendo qué tienes o qué haces. Solo se trata de sentirlo.</p>
       </div>
-      <form >
+      <form enctype="multipart/form-data" action="" method="POST">
+        {% csrf_token %}
+
+        
+        
+       
+
+        
+
         <div class="qs" >
-          <label for="1"> 1.</label>
+          <label for="1"> 1</label>
           <input type="textarea" name="1" placeholder="" size="60"  />
         </div>
         
@@ -129,18 +137,9 @@
     
     <br />
     <br />
-    <button  class="btn btn-dark" id="btn-guardar" onSubmit={guardar(e)} style="z-index: 3;" >Guardar </button>
+    <button type="submit" class="btn btn-dark" id="btn-guardar"  style="z-index: 3;" >Guardar </button>
   </form>
-  <script>
-    /*guardar preguntas en usuario crear tabla de usuario*/
-    const btn = document.getElementById('btn-guardar')
-
-    function guardar(e){
-      e.preventDefault();
-      return (alert('guardado'))
-
-    }
-  </script>
+  
   
     {% endblock content2 %}
   </h2>

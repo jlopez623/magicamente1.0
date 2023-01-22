@@ -1,10 +1,578 @@
-{% extends 'layout.html' %} {% load static %} {% block content1 %}
-<img src="{% static 'img/17/17-vidaequilibrada.png' %}" class="imgcentral-i" />
+{% extends "layout.html" %} {% load static %} {%block title %} pagina 1 {% endblock %}  {% block content1 %} 
 
-{% endblock %} {% block content2 %}
-<img src="{% static 'img/17/17-rueda de lavida.png' %}" class="imgcentral-d" />
+{% csrf_token %}
+
+    <img src="{% static '/img/p42.png' %}" alt="" class="imgcentral2" >
+    
+  <div>
+    
+    <span>prueba de datos:</span>
+    {% for field in cuestionario %}
+
+    <p> {{field}} </p>
+
+    {% endfor %}
+
+  </div>
 
 
+{% endblock %} 
+{% block content2 %}
+
+<h2 class="cursiva-media">Resultado de las Áreas</h2>
+
+<div class="tabla">
+  <div class="area" style="background-color: rgb(173, 92, 195)">
+    <div class="titulo">Espiritual</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="4">
+      <div>4</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="17">
+      <div>17</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="30">
+      <div>30</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="33">
+      <div>33</div>
+      
+    </div>
+    <div class="preguntaTabla" id="39">
+      <div>39</div>
+      
+    </div>
+    <div class="preguntaTabla" id="49">
+      <div>49</div>
+      
+    </div>
+    <div class="preguntaTabla" id="56">
+      <div>56</div>
+      
+    </div>
+    <div class="preguntaTabla" id="60">
+      <div>60</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+  <div class="area" style="background-color: rgb(28, 48, 161)">
+    <div class="titulo">Física</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="3">
+      <div>3</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="6">
+      <div>6</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="9">
+      <div>9</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="14">
+      <div>14</div>
+      
+    </div>
+    <div class="preguntaTabla" id="16">
+      <div>16</div>
+      
+    </div>
+    <div class="preguntaTabla" id="29">
+      <div>29</div>
+      
+    </div>
+    <div class="preguntaTabla" id="32">
+      <div>32</div>
+      
+    </div>
+    <div class="preguntaTabla" id="48">
+      <div>48</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+  <div class="area" style="background-color: rgb(234, 125, 30)">
+    <div class="titulo">Mental</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="2">
+      <div>2</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="5">
+      <div>5</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="19">
+      <div>19</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="21">
+      <div>21</div>
+      
+    </div>
+    <div class="preguntaTabla" id="25">
+      <div>25</div>
+      
+    </div>
+    <div class="preguntaTabla" id="35">
+      <div>35</div>
+      
+    </div>
+    <div class="preguntaTabla" id="37">
+      <div>37</div>
+      
+    </div>
+    <div class="preguntaTabla" id="40">
+      <div>40</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(53, 138, 213)">
+    <div class="titulo">Emocional</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="23">
+      <div>23</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="41">
+      <div>41</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="43">
+      <div>43</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="50">
+      <div>50</div>
+      
+    </div>
+    <div class="preguntaTabla" id="59">
+      <div>59</div>
+      
+    </div>
+    <div class="preguntaTabla" id="61">
+      <div>61</div>
+      
+    </div>
+    <div class="preguntaTabla" id="65">
+      <div>65</div>
+      
+    </div>
+    <div class="preguntaTabla" id="67">
+      <div>67</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(213, 77, 53)">
+    <div class="titulo">Ludíca</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="1">
+      <div>1</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="11">
+      <div>11</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="47">
+      <div>47</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="52">
+      <div>52</div>
+      
+    </div>
+    <div class="preguntaTabla" id="55">
+      <div>55</div>
+      
+    </div>
+    <div class="preguntaTabla" id="58">
+      <div>58</div>
+      
+    </div>
+    <div class="preguntaTabla" id="62">
+      <div>62</div>
+      
+    </div>
+    <div class="preguntaTabla" id="68">
+      <div>68</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(90, 35, 106)">
+    <div class="titulo">FAMILIAR</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="12">
+      <div>12</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="18">
+      <div>18</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="22">
+      <div>22</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="53">
+      <div>53</div>
+      
+    </div>
+    <div class="preguntaTabla" id="63">
+      <div>63</div>
+      
+    </div>
+    <div class="preguntaTabla" id="64">
+      <div>64</div>
+      
+    </div>
+    <div class="preguntaTabla" id="69">
+      <div>69</div>
+      
+    </div>
+    <div class="preguntaTabla" id="70">
+      <div>70</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(89, 157, 79)">
+    <div class="titulo">SOCIAL</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="10">
+      <div>10</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="13">
+      <div>13</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="42">
+      <div>42</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="45">
+      <div>45</div>
+      
+    </div>
+    <div class="preguntaTabla" id="54">
+      <div>54</div>
+      
+    </div>
+    <div class="preguntaTabla" id="57">
+      <div>57</div>
+      
+    </div>
+    <div class="preguntaTabla" id="73">
+      <div>73</div>
+      
+    </div>
+    <div class="preguntaTabla" id="75">
+      <div>75</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(235, 166, 29)">
+    <div class="titulo">ECONÓMICA</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="7">
+      <div>7</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="8">
+      <div>8</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="15">
+      <div>15</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="24">
+      <div>24</div>
+      
+    </div>
+    <div class="preguntaTabla" id="26">
+      <div>26</div>
+      
+    </div>
+    <div class="preguntaTabla" id="36">
+      <div>36</div>
+      
+    </div>
+    <div class="preguntaTabla" id="38">
+      <div>38</div>
+      
+    </div>
+    <div class="preguntaTabla" id="44">
+      <div>44</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(45, 100, 42)">
+    <div class="titulo">ECOLÓGICA</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="31">
+      <div>31</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="34">
+      <div>34</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="74">
+      <div>74</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="76">
+      <div>76</div>
+      
+    </div>
+    <div class="preguntaTabla" id="77">
+      <div>77</div>
+      
+    </div>
+    <div class="preguntaTabla" id="78">
+      <div>78</div>
+      
+    </div>
+    <div class="preguntaTabla" id="79">
+      <div>79</div>
+      
+    </div>
+    <div class="preguntaTabla" id="80">
+      <div>80</div>
+      
+    </div>
+    <div class="preguntaTabla" id="total">
+      <div>Total</div>
+      
+    </div>
+  </div>
+
+  <div class="area" style="background-color: rgb(182, 85, 177)">
+    <div class="titulo">LABORAL</div>
+
+    <div class="preguntaTabla" id="A">
+      <span>Pregunta número: </span>
+      <div>Tu calificación:</div>
+    </div>
+
+    <div class="preguntaTabla" id="20">
+      <div>20</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="27">
+      <div>27</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="28">
+      <div>28</div>
+      
+    </div>
+
+    <div class="preguntaTabla" id="46">
+      <div>46</div>
+      
+    </div>
+    <div class="preguntaTabla" id="51">
+      <div>51</div>
+      
+    </div>
+    <div class="preguntaTabla" id="66">
+      <div>66</div>
+      
+    </div>
+    <div class="preguntaTabla" id="71">
+      <div>71</div>
+      
+    </div>
+    <div class="preguntaTabla" id="72">
+      <div>72</div>
+      
+    </div>
+    <div class="preguntaTabla" id=4>
+      <div>Total</div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+    let datos = JSON.parse(localStorage.getItem('datosGrafica'));
+    console.log(datos);
+
+    function setDato(n){
+
+        div0=document.getElementById(n);
+        div1= document.createElement('div');
+        div1.innerText=datos[n-1];
+        div0.append(div1);
+    }
+    
+    for (let i=1; i<80; i++){
+        setDato(i) ;
+        console.log(i)
+    }
+
+</script>
+
+<style>
+  .tabla {
+    width: 80%;
+    color: white;
+    display: fle0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+  }
+  .area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 2px;
+  }
+  .preguntaTabla {
+    min-width: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+  }
+
+  .titulo {
+    width: 45px;
+    font-family: "Amatic SC";
+    font-size: 16px;
+  }
+
+  .portada{
+    margin-left: 0;
+  }
+  
+ 
+</style>
 
 {% endblock %}
-

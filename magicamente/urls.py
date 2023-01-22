@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from libro.views import agradecimientos,  cargarHtml, magia2, parametros,  portada, shortcut, personaImportante, signout, signin, crearTask
 from libro.views import prologo1, prologo2, introduccion, introduccion2, magia1, magia2, magia3, fomr1, magia4
-from libro.views import agua01, agua02, agua03, usuario,  crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas, grafica1, tabla, grafica2, actuar1, quiensoy1, quiensoy2, aguaport, agua001, agua002, tierra001, tierra002, tierra003, tierra004, tierra005, tierra006, tierra007, tierra008, tierra009, tierra010, tierra011, aire01, aire02, aire03, aire04, aire05, aire06, aire07, aire08, aire09, aire10, aire11, aire12, aire13, aire14, aire15, fuego01, fuego02, fuego03, fuego04, portada0, fuego05
+from libro.views import agua01, agua02, agua03, usuario,  crearUsuario, home, signup, dashboard, task, taskDetail, complete, delete, completadas, grafica1, tabla, grafica2, actuar1, quiensoy1, quiensoy2, aguaport, agua001, agua002, tierra001, tierra002, tierra003, tierra004, tierra005, tierra006, tierra007, tierra008, tierra009, tierra010, tierra011, aire01, aire02, aire03, aire04, aire05, aire06, aire07, aire08, aire09, aire10, aire11, aire12, aire13, aire14, aire15, fuego01, fuego02, fuego03, fuego04, portada0, fuego05, tablaPrueba
 
 
 urlpatterns = [
@@ -99,6 +99,7 @@ urlpatterns = [
     path('fuego03/', fuego03, name='fuego03'),
     path('fuego04/', fuego04, name='fuego04'),
     path('fuego05/', fuego05, name='fuego05'),
+    path('tabla/', tablaPrueba, name='tabla'),
     
     
     path('form1/', fomr1),

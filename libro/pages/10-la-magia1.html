@@ -1,104 +1,139 @@
-{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load
-static %} {% block content1 %}
+{% extends "content.html" %} {%block title %} pagina 1 {% endblock %} {% load static %} {% block content1 %}
 
+<style>
+  #main-canvas{
+    border: 1px solid rgb(154, 5, 188);
+    z-index: level 5;
+    background-image: url("{% static 'img/color/LibroDeMiVidaN.svg' %}");
+  }
 
-<main class="main-container">
-  <canvas id="main-canvas" width="700" height="700"></canvas>
-  <span class="spani">
-    <input type="color" id="color" oninput="defcolor(this.value);" />
-    <input
-      type="range"
-      id="grosor"
-      oninput="defgrosor(this.value);"
-      min="1"
-      max="30"
-      value="10"
-    />
-  </span>
+</style>
+<main id="main-container">
+  <canvas
+    id="main-canvas"
+    width="700"
+    height="700"
+      
+  ></canvas>
+
+  <div
+    
+    style="display: flex; flex-direction: row; justify-content: space-around;"
+  >
+    <div><input type="color" id="color" oninput="defcolor(this.value);" /></div>
+    <div>
+      <input
+        type="range"
+        id="grosor"
+        oninput="defgrosor(this.value);"
+        min="1"
+        max="30"
+        value="10"
+      />
+    </div>
+  </div>
 </main>
 
 <script>
-  const mainCanvas = document.querySelector("#main-canvas");
+  const mainCanvas = document.getElementById("main-canvas");
   let context = mainCanvas.getContext("2d");
   let rect = mainCanvas.getBoundingClientRect();
 
-  let initialX = 0;
-  let initialY = 0, dibujando = false, color='black', grosor=1;
+  let initialX = 0,
+    initialY = 0,
+    dibujando = false,
+    color = "black",
+    grosor = 1;
 
-  function dibujar(x1, y1, x2, y2){
-
-      context.beginPath();
-      context.strokeStyle=color;
-      context.lineWidth=grosor;
-      context.moveTo(x1,y1);
-      context.lineTo(x2,y2);
-      context.stroke();
-      context.closePath();
-
-
+  function defcolor(c) {
+    color = c;
   }
 
-
-  function defcolor(c){
-      color = c;
+  function defgrosor(g) {
+    grosor = g;
   }
 
-  function defgrosor(g){
-      grosor = g;
-  }
-
-  mainCanvas.addEventListener('mousedown',function(e){
-      initialX= e.clentX-rect.left;
-      initialY= e.clentY-rect.top;
-      dibujando = true;
-      console.log('mousedown')
-
+  mainCanvas.addEventListener("mousedown", function (e) {
+    initialX = e.clientX - rect.left;
+    initialY = e.clientY - rect.top;
+    dibujando = true;
+    console.log("mousedown");
   });
 
-  mainCanvas.addEventListener('mousemove', function(e){
+  mainCanvas.addEventListener("mousemove", function (e) {
+    if (dibujando === true) {
+      dibujar(initialX, initialY, e.clientX - rect.left, e.clientY - rect.top);
 
-      if(dibujando===true){
-          dibujar(initialX, initialY, e.clentX-rect.left, e.clentY-rect.top);
+      initialX = e.clientX - rect.left;
+      initialY = e.clientY - rect.top;
+      
+    }
+  });
 
-          initialX= e.clentX - rect.left
-          initialY= e.clentY - rect.top
+  mainCanvas.addEventListener("mouseup", function (e) {
+    if (dibujando === true) {
+      dibujar(initialX, initialY, e.clientX - rect.left, e.clientY - rect.top);
+      initialX = 0;
+      initialY = 0;
+      dibujando = false;
+    }
+  });
 
+  function dibujar(x1, y1, x2, y2) {
+    context.beginPath();
+    context.strokeStyle = color;
+    context.lineWidth = grosor;
+    context.moveTo(x1, y1);
+    context.lineTo(x2, y2);
+    context.stroke();
+    context.closePath();
+    
+  }
+ 
 
-      }
-
-  })
-
-  mainCanvas.addEventListener('mouseup', function(e){
-      if (dibujando===true){
-          dibujar(initialX, initialY, e.clentX - rect.left, e.clentY - rect.top);
-          initialX = 0;
-          initialY = 0;
-          dibujando = false;
-      }
-  })
+  
 </script>
+
+<!-- ----------------------------------------------------------------------------------------------------- -->
 
 {% endblock %} {% block content2 %}
 
 <h2 class="cursiva-media">la magia</h2>
 
-<div style="margin-left: 10%; margin-right:10%; background-color:rgb(178, 185, 185); padding:2%; display:flex; justify-content:center">
- <p>
-  La magia vive en la inocencia de la transformación, es espontánea y surge de
-  la mente de cada ser. La magia trasciende lo percibido por los sentidos, pues
-  surge de la consciencia. Hablamos de la magia como inspiración, creatividad y
-  entusiasmo. <br /> <br>
-  Para ilustrarte mejor sobre este concepto, viene a mi mente la historia de un
-  maestro y su joven discípulo, aprendiz de mago, quienes, a través de la
-  observación de la naturaleza y su flujo en el mundo, logran comprender las
-  singularidades de la consciencia, la mente humana y la relación que existe
-  entre ambos aspectos y la magia. <br /><br />
- </p>
-</div>
-<div style="margin-left: 10%; margin-right:10%;  padding:2%; display:flex; justify-content:center">
-  <p style="text-align: center;">
+<div
+  style="
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(178, 185, 185);
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+  "
+>
+  <p>
+    La magia vive en la inocencia de la transformación, es espontánea y surge de
+    la mente de cada ser. La magia trasciende lo percibido por los sentidos,
+    pues surge de la consciencia. Hablamos de la magia como inspiración,
+    creatividad y entusiasmo. <br />
     <br />
-    
+    Para ilustrarte mejor sobre este concepto, viene a mi mente la historia de
+    un maestro y su joven discípulo, aprendiz de mago, quienes, a través de la
+    observación de la naturaleza y su flujo en el mundo, logran comprender las
+    singularidades de la consciencia, la mente humana y la relación que existe
+    entre ambos aspectos y la magia.
+  </p>
+</div>
+<div
+  style="
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+  "
+>
+  <p style="text-align: center">
+    <br />
+
     ¿Qué es la magia? Preguntó el joven discípulo a su maestro. <br />
     Tras varios segundos de silencio, el maestro respondió: <br />
     - La magia, mi querido aprendiz, es transformación. <br />
@@ -109,14 +144,15 @@ static %} {% block content1 %}
     -Bien, dime ¿qué fue lo que más llamó tu atención? <br />
     Lo que más llamó mi atención fue ver cómo con el paso de cada hora su forma
     nunca fue la misma, siempre estaba cambiando de un estado a otro en poco
-    tiempo; Finalmente, cuando terminó de romper su capullo y abrió sus alas, fue
-    maravilloso verla emprender el vuelo. <br />
+    tiempo; Finalmente, cuando terminó de romper su capullo y abrió sus alas,
+    fue maravilloso verla emprender el vuelo. <br />
     <br />
     -El maestro, mirándole fijamente y con una dulce sonrisa, le dijo: <br />
     - Eso que has visto es la transformación, todo bajo el cielo que cobija
     nuestra existencia vive de este modo, en cambio permanente, instante tras
     instante. Has de estar atento para aprender a ver el cambio en cada cosa, y
-    ser consciente de todo lo que ocurre en la naturaleza y cómo lo vive tu mente.
+    ser consciente de todo lo que ocurre en la naturaleza y cómo lo vive tu
+    mente.
   </p>
 </div>
 

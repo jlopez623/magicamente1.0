@@ -1,6 +1,6 @@
 <form enctype="multipart/form-data" method="post">
     {% csrf_token %}
-    {% for campo in formulario %}
+    {% for campo in context['data'] %}
 
     <div class='mb-3'>
         <label for="" class="form-label">{{campo.label}}</label>
@@ -10,7 +10,7 @@
         name="{{campo.name}}"
         id=""
         aria-describedby=""
-        placeholder="{{campo.label}}">
+        placeholder="PRUEBA">
 
 
     </div>
